@@ -1,0 +1,163 @@
+%% =====================================================================
+%%  main.tex  --  BẢN THẢO GỬI TẠP CHÍ KHCN ĐHQG-HCM
+%%  (Tạp chí Khoa học và Công nghệ ĐHQG-HCM, chuyên san Kỹ thuật & Công nghệ)
+%%
+%%  Đề tài: Lập đường trên bề mặt dẫn đường thành phố 3D bằng Funnel Tree
+%%          và kiểm chứng mô phỏng UAV
+%%
+%%  CẤU TRÚC FILE
+%%    main.tex        <- file này: khai báo class, \input các phần
+%%    vnuhcmjet.cls   <- định dạng của tạp chí (đo từ bản in mẫu)
+%%    metadata.tex    <- tiêu đề, tác giả, đơn vị, tóm tắt, từ khóa
+%%    Sections/*.tex  <- nội dung từng mục
+%%    Figures/*       <- hình
+%%    Code/*.py       <- đoạn mã trích trong mục Cơ sở lý thuyết
+%%    refs.bib        <- tài liệu tham khảo (biblatex + biber, Vancouver)
+%%
+%%  BIÊN DỊCH
+%%    latexmk          # pdfLaTeX + biber
+%%    latexmk -C       # xoá file phụ
+%%  Chỉ dùng pdfLaTeX (vntex + bảng mã T5).
+%% =====================================================================
+
+\documentclass[englishcover]{vnuhcmjet}
+
+%% --- Gói bổ sung cho bản thảo ---------------------------------------
+%% siunitx: số liệu theo quy ước Việt Nam (dấu phẩy thập phân, tách hàng nghìn)
+\usepackage{siunitx}
+\sisetup{
+  output-decimal-marker={,},
+  group-separator={\,},
+  group-minimum-digits=5,
+  group-digits=integer,
+  detect-all
+}
+%% subcaption: hình nhiều ô (a), (b), (c) — nạp sau caption của class
+\usepackage{subcaption}
+\captionsetup[sub]{font=footnotesize,justification=centering,skip=2pt}
+%% bảng nhiều cột, cột canh trái theo bề rộng cho trước
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{adjustbox}
+\usepackage{makecell}
+%% url cho phần dữ liệu và mã nguồn
+\usepackage{url}
+\urlstyle{same}
+\usepackage{attachfile}
+
+%% --- Danh sách mã nguồn (mục Cơ sở lý thuyết) ---
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codebg}{RGB}{247,247,247}
+\lstdefinestyle{bashcode}{
+  language=bash,
+  basicstyle=\ttfamily\fontsize{5.8}{6.9}\selectfont,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape,
+  frame=single,
+  rulecolor=\color{black!35},
+  backgroundcolor=\color{codebg},
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=false,
+  showstringspaces=false,
+  numbers=none,
+  xleftmargin=0pt,
+  framexleftmargin=4pt,
+  linewidth=\linewidth,
+  aboveskip=4pt,
+  belowskip=3pt
+}
+\lstdefinestyle{jsoncode}{
+  basicstyle=\ttfamily\fontsize{5.8}{6.9}\selectfont,
+  frame=single,
+  rulecolor=\color{black!35},
+  backgroundcolor=\color{codebg},
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=false,
+  breakindent=0pt,
+  showstringspaces=false,
+  numbers=none,
+  xleftmargin=0pt,
+  framexleftmargin=4pt,
+  linewidth=\linewidth,
+  aboveskip=4pt,
+  belowskip=3pt
+}
+\lstdefinestyle{pycode}{
+  language=Python,
+  basicstyle=\ttfamily\fontsize{5.8}{6.9}\selectfont,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape,
+  stringstyle=\ttfamily,
+  numbers=none,
+  frame=single,
+  rulecolor=\color{black!35},
+  backgroundcolor=\color{codebg},
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  showstringspaces=false,
+  xleftmargin=0pt,
+  framexleftmargin=4pt,
+  linewidth=\linewidth,
+  aboveskip=4pt,
+  belowskip=3pt
+}
+%% Khối mã là một loại float riêng để không bị cắt qua trang/ cột,
+%% và để chú thích luôn nằm cùng khối mã.
+\usepackage{float}
+\newfloat{code}{!tb}{lop}
+\floatname{code}{Mã}
+
+%% --- Định nghĩa dùng chung ---
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+%% Danh mục tài liệu tham khảo của bản thảo này hơi dày hơn mẫu một chút
+%% (giãn cách mục 1 bp, giãn dòng 12,3 bp) để không còn 2 dòng tràn sang
+%% trang cuối; bề rộng chữ và cỡ chữ vẫn giữ 10 pt như mẫu.
+\AtBeginBibliography{%
+  \setlength{\bibitemsep}{1bp}%
+  \renewcommand*{\bibfont}{\fontsize{10}{12.3}\selectfont}%
+}
+
+%% Thông tin bài báo
+\input{metadata}
+
+%% Từ khóa vào metadata của tệp PDF
+\makeatletter
+\AtBeginDocument{\hypersetup{pdfkeywords={\jst@keywordsvi}}}
+\makeatother
+
+%% Tài liệu tham khảo
+\addbibresource{refs.bib}
+
+\begin{document}
+
+%% --- Trang 1: bìa tiếng Việt + tóm tắt + từ khóa ---
+\jstcovervi
+
+%% --- Thân bài: 2 cột, lề trái 52 mm ---
+\jstbody
+
+\input{Sections/01-Gioi-thieu}
+\input{Sections/02-Co-so-ly-thuyet}
+\input{Sections/03-Du-lieu-EDA}
+\input{Sections/04-Ket-qua}
+\input{Sections/05-Mo-phong-Gazebo}
+\input{Sections/06-Ket-luan}
+\input{Sections/07-Danh-muc-viet-tat}
+\input{Sections/08-Xung-dot-loi-ich}
+\input{Sections/09-Dong-gop-tac-gia}
+\input{Sections/10-Cam-on}
+\input{Sections/12-Phu-luc}
+\input{Sections/11-Tai-lieu-tham-khao}
+
+%% --- Trang cuối: bìa tiếng Anh ---
+\jstenglishcover
+
+\end{document}

@@ -1,0 +1,45 @@
+%% ---------------------------------------------------------------------
+%% 02 - ĐỐI TƯỢNG VÀ PHƯƠNG PHÁP NGHIÊN CỨU
+%% Mô tả nền tảng thử nghiệm, dữ liệu, giả định và thuật toán.
+%% Mục con dùng \subsection{...} (không đánh số, 10 pt sans bold).
+%% ---------------------------------------------------------------------
+
+\section{Đối tượng và phương pháp nghiên cứu}
+
+\subsection{Nền tảng thử nghiệm và giả định}
+
+Nền tảng thử nghiệm là robot vi sai \textit{Hermes} của nhóm tác giả, được
+trang bị LiDAR 2D quét $270^\circ$ với tầm quan sát danh định $30$~m và một
+máy tính nhúng chạy ROS~2. Môi trường thử nghiệm là hành lang văn phòng có
+vật cản tĩnh và người đi lại, được ghi lại thành bản đồ lưới độ phân giải
+$0{,}05$~m.
+
+Các giả định: (i)~vị trí robot luôn xác định được nhờ SLAM; (ii)~vật cản
+động chuyển động với vận tốc không vượt quá $1{,}5$~m/s; (iii)~bán kính an
+toàn của robot là $0{,}35$~m.
+
+\subsection{Biểu diễn hình học bằng Voronoi có trọng số}
+
+Xét tập vật cản dạng đĩa $\{\mathbf{p}_i, r_i\}_{i=1}^{n}$ trong mặt phẳng.
+Khoảng cách có trọng số từ điểm $\mathbf{q}$ tới vật cản thứ $i$ được định
+nghĩa như trong phương trình~\eqref{eq:wvoronoi}:
+\begin{equation}
+  d_w(\mathbf{q}, \mathbf{p}_i)
+  = \frac{\lVert \mathbf{q} - \mathbf{p}_i \rVert}{w_i},
+  \qquad w_i = \frac{1}{r_i + \varepsilon},
+  \label{eq:wvoronoi}
+\end{equation}
+trong đó $\varepsilon > 0$ tránh chia cho~$0$. Ô Voronoi có trọng số của vật
+cản $i$ là tập điểm gần nó nhất theo $d_w$; biên của các ô tạo thành một
+mạng đường đi ứng viên có khoảng cách an toàn tương đối đều.
+
+Lớp $\beta$-complexes được dùng để xấp xỉ phần bù rời rạc của các ô, giúp
+truy vấn nhanh miền còn trống khi lấy mẫu.
+
+\subsection{Hướng dẫn lấy mẫu và giám sát logic mờ}
+
+RRT* được hướng dẫn bằng cách ưu tiên lấy mẫu trong hành lang an toàn quanh
+mạng Voronoi. Bộ giám sát logic mờ nhận ba đầu vào là khoảng cách tới vật
+cản gần nhất, tốc độ tương đối và độ cong quỹ đạo, rồi xuất một mức can
+thiệp (giữ nguyên, giảm tốc, lập lại kế hoạch). Chi tiết hàm thuộc và luật
+mờ được trình bày trong bảng~\ref{tab:rules}.

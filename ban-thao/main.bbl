@@ -1,0 +1,188 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{an2024funnel}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=eae63c442a22af9304d133b7713be10d}{%
+           family={An},
+           familyi={A\bibinitperiod},
+           given={P.\bibnamedelimi T.},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=ea5de027275cc2c1fe0bb39980223264}{%
+           family={Hoai},
+           familyi={H\bibinitperiod},
+           given={T.\bibnamedelimi V.},
+           giveni={T\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=54558a234afae4875e8b57842fb214be}{%
+           family={Thinh},
+           familyi={T\bibinitperiod},
+           given={V.\bibnamedelimi B.},
+           giveni={V\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba723df1bd45d5ad5810261485f00793}
+      \strng{fullhash}{ba723df1bd45d5ad5810261485f00793}
+      \strng{fullhashraw}{ba723df1bd45d5ad5810261485f00793}
+      \strng{bibnamehash}{ba723df1bd45d5ad5810261485f00793}
+      \strng{authorbibnamehash}{ba723df1bd45d5ad5810261485f00793}
+      \strng{authornamehash}{ba723df1bd45d5ad5810261485f00793}
+      \strng{authorfullhash}{ba723df1bd45d5ad5810261485f00793}
+      \strng{authorfullhashraw}{ba723df1bd45d5ad5810261485f00793}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optimization.}
+      \field{number}{13}
+      \field{title}{The funnel tree algorithm for finding shortest paths on polyhedral surfaces}
+      \field{volume}{73}
+      \field{year}{2024}
+      \field{pages}{4011\bibrangedash 4036}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1080/02331934.2023.2241496
+      \endverb
+    \endentry
+    \entry{quangnguyen2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=5b69ca0f609ed12cf088a051cca8aad7}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b69ca0f609ed12cf088a051cca8aad7}
+      \strng{fullhash}{5b69ca0f609ed12cf088a051cca8aad7}
+      \strng{fullhashraw}{5b69ca0f609ed12cf088a051cca8aad7}
+      \strng{bibnamehash}{5b69ca0f609ed12cf088a051cca8aad7}
+      \strng{authorbibnamehash}{5b69ca0f609ed12cf088a051cca8aad7}
+      \strng{authornamehash}{5b69ca0f609ed12cf088a051cca8aad7}
+      \strng{authorfullhash}{5b69ca0f609ed12cf088a051cca8aad7}
+      \strng{authorfullhashraw}{5b69ca0f609ed12cf088a051cca8aad7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Kho mã nguồn. Truy cập 14/11/2026}
+      \field{title}{drone-delivery-funnel-tree: cài đặt Funnel Tree và quy trình thực nghiệm UAV}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://github.com/quangnguyen0101/drone-delivery-funnel-tree
+      \endverb
+      \verb{url}
+      \verb https://github.com/quangnguyen0101/drone-delivery-funnel-tree
+      \endverb
+    \endentry
+    \entry{kien2026repo}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=e280e1ce219ad34811a9e3ef669b24d9}{%
+           family={Kiên},
+           familyi={K\bibinitperiod},
+           given={Đỗ\bibnamedelima Lê\bibnamedelima Chí},
+           giveni={Đ\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=42b841b123c84331ad85d02f6fd439d3}{%
+           family={Quang},
+           familyi={Q\bibinitperiod},
+           given={Nguyễn\bibnamedelimb Trương\bibnamedelima Đăng},
+           giveni={N\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim Đ\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a1df2a5a46725aa2b4a86ab0c9d19c2}
+      \strng{fullhash}{3a1df2a5a46725aa2b4a86ab0c9d19c2}
+      \strng{fullhashraw}{3a1df2a5a46725aa2b4a86ab0c9d19c2}
+      \strng{bibnamehash}{3a1df2a5a46725aa2b4a86ab0c9d19c2}
+      \strng{authorbibnamehash}{3a1df2a5a46725aa2b4a86ab0c9d19c2}
+      \strng{authornamehash}{3a1df2a5a46725aa2b4a86ab0c9d19c2}
+      \strng{authorfullhash}{3a1df2a5a46725aa2b4a86ab0c9d19c2}
+      \strng{authorfullhashraw}{3a1df2a5a46725aa2b4a86ab0c9d19c2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Kho mã nguồn và dữ liệu, truy cập 19/11/2026}
+      \field{title}{{UAV Funnel Tree}: dữ liệu, tuyến và chuyến bay}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://github.com/kienakalo/uav-funnel-tree-gazebo
+      \endverb
+      \verb{url}
+      \verb https://github.com/kienakalo/uav-funnel-tree-gazebo
+      \endverb
+    \endentry
+    \entry{cityasset}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=1cfaa8f47d25baf84a0634935a9f5d55}{%
+           family={{Saigon 3D City}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cfaa8f47d25baf84a0634935a9f5d55}
+      \strng{fullhash}{1cfaa8f47d25baf84a0634935a9f5d55}
+      \strng{fullhashraw}{1cfaa8f47d25baf84a0634935a9f5d55}
+      \strng{bibnamehash}{1cfaa8f47d25baf84a0634935a9f5d55}
+      \strng{authorbibnamehash}{1cfaa8f47d25baf84a0634935a9f5d55}
+      \strng{authornamehash}{1cfaa8f47d25baf84a0634935a9f5d55}
+      \strng{authorfullhash}{1cfaa8f47d25baf84a0634935a9f5d55}
+      \strng{authorfullhashraw}{1cfaa8f47d25baf84a0634935a9f5d55}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Mô hình 3D, giấy phép CC BY 4.0}
+      \field{note}{Truy cập 14/11/2026}
+      \field{title}{Ho Chi Minh City 2025 -- Thành Phố Hồ Chí Minh}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://sketchfab.com/3d-models/ho-chi-minh-city-2025-thanh-pho-ho-chi-minh-10e6d7c014a141b4a4adec54729d0968
+      \endverb
+      \verb{url}
+      \verb https://sketchfab.com/3d-models/ho-chi-minh-city-2025-thanh-pho-ho-chi-minh-10e6d7c014a141b4a4adec54729d0968
+      \endverb
+    \endentry
+    \entry{gazebo}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=59afb9dcd179932967b4f5aa14be6ce5}{%
+           family={{Gazebo}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{59afb9dcd179932967b4f5aa14be6ce5}
+      \strng{fullhash}{59afb9dcd179932967b4f5aa14be6ce5}
+      \strng{fullhashraw}{59afb9dcd179932967b4f5aa14be6ce5}
+      \strng{bibnamehash}{59afb9dcd179932967b4f5aa14be6ce5}
+      \strng{authorbibnamehash}{59afb9dcd179932967b4f5aa14be6ce5}
+      \strng{authornamehash}{59afb9dcd179932967b4f5aa14be6ce5}
+      \strng{authorfullhash}{59afb9dcd179932967b4f5aa14be6ce5}
+      \strng{authorfullhashraw}{59afb9dcd179932967b4f5aa14be6ce5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Phiên bản 10.5.0, truy cập 18/11/2026}
+      \field{title}{Gazebo Jetty (gz-sim 10) documentation}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://gazebosim.org/docs/jetty/
+      \endverb
+      \verb{url}
+      \verb https://gazebosim.org/docs/jetty/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

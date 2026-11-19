@@ -1,0 +1,85 @@
+{
+  "label": "cell4",
+  "commit": "beb1162",
+  "mission": "city.standardized.triangulation",
+  "goals": [
+    "g1",
+    "g2",
+    "g3"
+  ],
+  "parameters": {
+    "triangulation": {
+      "cell": 4.0,
+      "clearance": 1.5,
+      "half_width": 1.6,
+      "max_slope": 0.5
+    },
+    "solver": {
+      "seconds": 600.0,
+      "max_nodes": 400000,
+      "clipping": true
+    },
+    "world": {
+      "simplify": 0.1,
+      "collision_grid": 1.0
+    },
+    "flight": {
+      "speed": 5.0,
+      "max_accel": 3.0,
+      "dwell": 0.0,
+      "start_delay": 2.0
+    },
+    "gazebo": {
+      "timeout": 900.0
+    },
+    "validate": {
+      "max_error": 1.0
+    }
+  },
+  "surface": {
+    "sha256": "052917dbbcecc908a8cfac026cee11f3591a21733e87063edbe439230a3f2ae1",
+    "parameters": {
+      "cell": 4.0,
+      "coverage": "city",
+      "vertical_clearance": 1.5,
+      "horizontal_half_width": 1.6,
+      "max_axis_slope": 0.5
+    }
+  },
+  "routes": {
+    "g1": {
+      "length": 142.909049803,
+      "waypoints": 50
+    },
+    "g2": {
+      "length": 127.295934519,
+      "waypoints": 59
+    },
+    "g3": {
+      "length": 86.194146092,
+      "waypoints": 48
+    },
+    "planning_seconds": 186.175,
+    "sha256": "d1200515f7d9c48b7d04b74a8b9e1b4f4cdca190cbfafea3deebc2e696ff327c",
+    "solver": {
+      "name": "funnel_tree",
+      "module": "algo/funnel_tree.py",
+      "module_sha256": "42465e58992c985455afddfa62d145febfc96cbbb0597b209c0a1c2ca2947bf2",
+      "timeout_seconds": 600.0,
+      "max_nodes": 400000,
+      "clipping": true
+    }
+  },
+  "flight": {
+    "g2": {
+      "duration": 33.247,
+      "max_error": 0.591,
+      "mean_error": 0.0633,
+      "max_speed": 5.1077,
+      "final_error": 0.0,
+      "valid": true,
+      "passed": true,
+      "route_sha256": "afe7fdb205143b5cdf5a0d223db54c8b20c2a9cfc04d9dccb60e2700deaf1e99"
+    }
+  }
+}

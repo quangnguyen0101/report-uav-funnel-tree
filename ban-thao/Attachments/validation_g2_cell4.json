@@ -1,0 +1,22 @@
+{
+  "rows": 331,
+  "completed": true,
+  "duration": 33.247,
+  "max_error": 0.591,
+  "mean_error": 0.0633,
+  "final_error": 0.0,
+  "max_speed": 5.1077,
+  "max_acceleration": 6.6617,
+  "max_error_limit": 1.0,
+  "mission": "data/processed/missions/city.standardized.triangulation.mission.json",
+  "goal": "g2",
+  "world": "funnel_sim_city_standardized_triangulation_g2",
+  "route_sha256": "afe7fdb205143b5cdf5a0d223db54c8b20c2a9cfc04d9dccb60e2700deaf1e99",
+  "run_id": "20261118_225012-139374",
+  "nominal_duration": 29.20112648638906,
+  "telemetry": "generated/simulate/city.standardized.triangulation-g2/physics_telemetry.csv",
+  "telemetry_sha256": "050d870c097c707b4f949752cb8d8bcfe39e8b47ee99f647eaa7a176725de3bf",
+  "arrival_tolerance": 0.5,
+  "valid": true,
+  "passed": true
+}

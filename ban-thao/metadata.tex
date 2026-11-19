@@ -1,0 +1,141 @@
+%% =====================================================================
+%%  metadata.tex  --  thông tin bài báo in trên hai trang bìa
+%%  Sửa tiêu đề, tác giả, đơn vị, tóm tắt, từ khóa ở đây.
+%% =====================================================================
+
+%% ---------------------------------------------------------------------
+%% 1. TIÊU ĐỀ
+%% ---------------------------------------------------------------------
+\jsttitlevi{%
+  Lập đường trên bề mặt dẫn đường thành phố ba chiều bằng Funnel Tree
+  và kiểm chứng mô phỏng UAV%
+}
+\jsttitleen{%
+  Surface-Constrained Route Planning on a 3D City Navigation Surface
+  Using Funnel Trees and UAV Simulation Validation%
+}
+
+%% ---------------------------------------------------------------------
+%% 2. LOẠI BÀI (in ở góc phải header)
+%% ---------------------------------------------------------------------
+\jstarticletypevi{Bài nghiên cứu}
+\jstarticletypeen{Research Article}
+
+%% ---------------------------------------------------------------------
+%% 3. TÁC GIẢ
+%%    Cú pháp: \jstauthorvi[chỉ số đơn vị]{Họ và tên}
+%%    - Chỉ số đơn vị in thành superscript, khớp với \jstaffiliationvi.
+%%    - Dấu * đánh dấu tác giả liên hệ (khai báo thêm ở mục 5).
+%% ---------------------------------------------------------------------
+\jstauthorvi[1,*]{Phan Thành An và các tác giả khác}
+\jstauthoren[1,*]{Phan Thanh An and other authors}
+
+%% ---------------------------------------------------------------------
+%% 4. ĐƠN VỊ
+%% ---------------------------------------------------------------------
+\jstaffiliationvi{1}{%
+  Viện Toán học và Các khoa học tính toán (IMACS), Trường Đại học Bách khoa
+  TP. Hồ Chí Minh (HCMUT), 268 Lý Thường Kiệt, Phường Diên Hồng,
+  TP. Hồ Chí Minh, Việt Nam.%
+}
+\jstaffiliationen{1}{%
+  Institute of Mathematical and Computational Sciences (IMACS),
+  Ho Chi Minh City University of Technology (HCMUT), 268 Ly Thuong Kiet,
+  Dien Hong Ward, Ho Chi Minh City, Vietnam.%
+}
+
+%% ---------------------------------------------------------------------
+%% 5. TÁC GIẢ LIÊN HỆ  {Họ tên}{Địa chỉ}{Email}
+%% ---------------------------------------------------------------------
+\jstcorrespondingvi{Phan Thành An}{%
+  Viện Toán học và Các khoa học tính toán (IMACS), Trường Đại học Bách khoa
+  TP. Hồ Chí Minh (HCMUT), 268 Lý Thường Kiệt, Phường Diên Hồng,
+  TP. Hồ Chí Minh, Việt Nam.}{thanhan@hcmut.edu.vn}
+
+\jstcorrespondingen{Phan Thanh An}{%
+  Institute of Mathematical and Computational Sciences (IMACS),
+  Ho Chi Minh City University of Technology (HCMUT), 268 Ly Thuong Kiet,
+  Dien Hong Ward, Ho Chi Minh City, Vietnam.}{thanhan@hcmut.edu.vn}
+
+%% ---------------------------------------------------------------------
+%% 6. TÓM TẮT VÀ TỪ KHÓA
+%% ---------------------------------------------------------------------
+\jstabstractvi{%
+Nghiên cứu trình bày một quy trình lập đường và kiểm chứng mô phỏng cho thiết
+bị bay không người lái (Unmanned Aerial Vehicle, UAV) trong môi trường thành
+phố ba chiều. Bản triển khai Python của thuật toán Funnel Tree được kiểm chứng
+trước hết trên chín lưới đa diện chuẩn, gồm bề mặt kín, bề mặt không lồi, mặt
+xuyến và hai bề mặt mở; năm lưới có kết quả tham chiếu trùng khớp tới bốn chữ
+số thập phân; bốn lưới còn lại được dùng để kiểm tra khả năng chạy trên bề mặt
+mở, bề mặt lồi và bề mặt có lỗ, không có reference độc lập. Quy trình sau đó được áp dụng cho mô hình thành phố
+\textit{Ho Chi Minh City 2025} (\num{301490} tam giác). Ba bề mặt dẫn đường được
+dựng với ô danh nghĩa $5$, $4$ và $3$ m, lần lượt có \num{2295}, \num{3355} và
+\num{5913} đỉnh; mỗi bề mặt là envelope an toàn phía trên công trình, có khoảng
+hở đứng, dự phòng ngang và vùng chuyển tiếp cao độ. Trên lưới $4$ m, ba tuyến
+từ một nguồn đến ba đích dài \num{142.909050}, \num{127.295935} và
+\num{86.194146} đơn vị mô phỏng. Các tuyến được tham số hóa bằng spline
+Catmull--Rom và một profile vận tốc thang, rồi bay trong Gazebo Jetty 10.5 bằng
+mô hình khối điểm $1$ kg với điều khiển bù trước và phản hồi PD. Chín chuyến bay
+(ba lưới $\times$ ba đích) đều hợp lệ; bảy chuyến đạt mốc sai số bám $1$ m, trong
+đó lưới $4$ m là cấu hình duy nhất đạt cả ba với sai số lớn nhất
+$0{,}399$--$0{,}601$ m. Lưới $5$ m và $3$ m mỗi lưới trượt một ca ở đích thứ
+hai ($1{,}022$ m và $1{,}381$ m): ca thứ nhất do waypoint không đều ở góc cua,
+ca thứ hai do vách dốc $45^\circ$ đòi leo nhanh hơn giới hạn $5$ m/s $\cdot$
+$3$ m/s$^2$. Kết quả xác nhận khả năng hoạt động của quy trình trong phạm vi ba
+cấu hình và ba đích; nghiên cứu chưa giải quyết tối ưu đường bay trong toàn bộ
+không gian tự do ba chiều hoặc điều phối nhiều UAV.%
+}
+
+\jstkeywordsvi{%
+Funnel Tree; đường đi ngắn nhất; bề mặt đa diện; thành phố 3D; UAV; Gazebo;
+trắc địa bề mặt%
+}
+
+\jstabstracten{%
+This study presents a route-planning and simulation-validation workflow for a
+single unmanned aerial vehicle in a three-dimensional city environment. The
+Python implementation of the Funnel Tree algorithm is first verified on nine
+benchmark polyhedral meshes, covering closed surfaces, a non-convex surface, a
+toroidal surface and two open surfaces; five meshes match reference results to
+four decimal places; the remaining meshes exercise open, convex and toroidal
+surfaces and have no independent reference. The workflow is then applied to
+the \textit{Ho Chi Minh City 2025} city model (\num{301490} triangles). Three
+navigation surfaces are built with nominal cell sizes of $5$, $4$ and $3$ m,
+with \num{2295}, \num{3355} and \num{5913} vertices, respectively; each is a
+safety envelope above the buildings with a vertical clearance, a horizontal
+margin and elevation transitions. On the $4$ m grid, three routes from one
+source to three destinations are \num{142.909050}, \num{127.295935} and
+\num{86.194146} simulation units long. The routes are parameterized by a
+Catmull--Rom spline and a single trapezoidal speed profile, and flown in Gazebo
+Jetty 10.5 with a $1$ kg point-mass model under feedforward and PD control. All
+nine flights (three grids $\times$ three goals) are valid; seven meet the $1$ m
+tracking target, and the $4$ m grid is the only configuration that meets it on
+all three goals, with maximum errors of $0{,}399$--$0{,}601$ m. The $5$ m and
+$3$ m grids each miss one goal ($1{,}022$ m and $1{,}381$ m): the first from
+uneven waypoint spacing at a corner, the second from a $45^\circ$ ramp that
+demands a climb faster than the $5$ m/s $\cdot$ $3$ m/s$^2$ limit. The results
+support the feasibility of the integrated workflow for the three tested
+configurations and three goals; the study does not establish optimality in
+unrestricted three-dimensional free space or demonstrate real-UAV operation or
+multi-UAV coordination.%
+}
+
+\jstkeywordsen{%
+Funnel Tree; shortest path; polyhedral surface; 3D city; UAV; Gazebo; surface
+geodesic%
+}
+
+%% ---------------------------------------------------------------------
+%% 7. KHUNG "TRÍCH DẪN BÀI BÁO NÀY" Ở ĐÁY BÌA
+%% ---------------------------------------------------------------------
+\jstcitationvi{%
+An PT và cs. Lập đường trên bề mặt dẫn đường thành phố ba chiều bằng Funnel
+Tree và kiểm chứng mô phỏng UAV. Tạp chí Khoa học và Công nghệ ĐHQG-HCM,
+chuyên san Kỹ thuật và Công nghệ. 2026.%
+}
+
+\jstcitationen{%
+An PT, et al. Surface-Constrained Route Planning on a 3D City Navigation
+Surface Using Funnel Trees and UAV Simulation Validation. VNUHCM Journal of
+Engineering and Technology. 2026.%
+}

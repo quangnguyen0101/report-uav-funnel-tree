@@ -1,0 +1,72 @@
+%% ---------------------------------------------------------------------
+%% 03 - KẾT QUẢ
+%% Bảng: đặt \caption phía TRÊN bảng, chữ 9 pt, nhãn "Bảng 1:" in đậm.
+%% Hình: đặt \caption phía DƯỚI hình, caption thụt vào ~9 pt như mẫu.
+%% Hình minh hoạ dưới đây vẽ bằng TikZ để không cần file ảnh bên ngoài;
+%% khi có hình thật, thay bằng \includegraphics[width=\linewidth]{...}
+%% ---------------------------------------------------------------------
+
+\section{Kết quả}
+
+\subsection{Ma trận luật của bộ giám sát}
+
+Bảng~\ref{tab:rules} liệt kê chín luật mờ dùng trong bộ giám sát. Mỗi ô là
+mức can thiệp tương ứng với cặp (khoảng cách, tốc độ tương đối).
+
+%% Bảng đặt \caption phía trên, chữ 9 pt; nội dung bảng 7 pt như mẫu.
+%% Bảng canh trái theo lề cột (KHÔNG \centering) và được phép tràn nhẹ
+%% sang phải nếu rộng hơn cột, đúng như bản in của tạp chí.
+\begin{table}[!htbp]
+  \caption{Ma trận hành động của bộ giám sát logic mờ.
+           [Nguồn: Nhóm tác giả]}
+  \label{tab:rules}
+  \raggedright
+  {\fontsize{7}{9.3}\selectfont
+  \begin{tabular}{@{}lccc@{}}
+    \toprule
+    & \multicolumn{3}{c}{\textbf{Độ tin cậy bản đồ $V$}} \\
+    \textbf{Pin $B$} & Tin cậy & Không chắc chắn & Không hợp lệ \\
+    \midrule
+    Cao        & C   & R   & S+R \\
+    Trung bình & C   & R   & S+R \\
+    Thấp       & S+R & S+R & S+R \\
+    \bottomrule
+  \end{tabular}}
+\end{table}
+
+\subsection{Kiến trúc ba lớp}
+
+Hình~\ref{fig:pipeline} minh hoạ luồng xử lý: dữ liệu LiDAR được gom cụm
+thành vật cản, xấp xỉ bằng $\beta$-complexes, sinh mạng Voronoi có trọng
+số, rồi chuyển sang bộ lấy mẫu có hướng dẫn trước khi bộ giám sát mờ quyết
+định có lập lại kế hoạch hay không.
+
+\begin{figure}[!htbp]
+  \centering
+  \begin{tikzpicture}[
+      node distance=7mm,
+      layer/.style={draw=black!70, rounded corners=2pt, fill=jstblue,
+                    text width=138pt, align=center, font=\footnotesize,
+                    inner sep=4pt, minimum height=15pt},
+      arr/.style={-latex, black!70, line width=0.5pt}]
+    \node[layer] (lidar) {LiDAR 2D $\rightarrow$ gom cụm vật cản};
+    \node[layer, below=of lidar] (geom) {Voronoi có trọng số
+        $+$ $\beta$-complexes};
+    \node[layer, below=of geom] (plan) {RRT* có hướng dẫn};
+    \node[layer, below=of plan] (fuzzy) {Giám sát logic mờ};
+    \draw[arr] (lidar) -- (geom);
+    \draw[arr] (geom) -- (plan);
+    \draw[arr] (plan) -- (fuzzy);
+    \draw[arr, dashed] (fuzzy.east) -- ++(10pt,0) |- (plan.east);
+  \end{tikzpicture}
+  \caption{Kiến trúc ba lớp của khung lập kế hoạch lai ghép.
+           Đường nét đứt là vòng phản hồi khi bộ giám sát yêu cầu lập lại
+           kế hoạch. [Nguồn: Nhóm tác giả]}
+  \label{fig:pipeline}
+\end{figure}
+
+\subsection{Chỉ số đánh giá}
+
+Ba nhóm chỉ số được ghi nhận: thời gian lập kế hoạch, độ dài quỹ đạo và số
+lần lập lại kế hoạch trên mỗi mét di chuyển. Mỗi cấu hình được chạy 30 lần
+với cùng bản đồ và cùng phân bố vật cản để bảo đảm ý nghĩa thống kê.

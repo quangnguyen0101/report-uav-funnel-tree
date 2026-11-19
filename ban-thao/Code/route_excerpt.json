@@ -1,0 +1,56 @@
+{
+  "mission": "data/processed/missions/city.standardized.triangulation.mission.json",
+  "mission_sha256": "995ab2a182c980de4525a5e9e1b4c087c29e2baa44b02addf97df68fa1899e45",
+  "mesh": "data/processed/meshes/city.standardized.triangulation.off",
+  "mesh_sha256": "9cec5d09523e26375be0e491f4c92b366f1429af8976f4571c687ec330782b1d",
+  "source": 2015,
+  "solver": {
+    "name": "funnel_tree",
+    "module": "algo/funnel_tree.py",
+    "module_sha256": "42465e58992c985455afddfa62d145febfc96cbbb0597b209c0a1c2ca2947bf2",
+    "timeout_seconds": 900.0,
+    "max_nodes": 800000,
+    "clipping": true
+  },
+  "mode": "explicit",
+  "routes": [
+    {
+      "id": "g1",
+      "vertex": 4762,
+      "length": 145.314559233,
+      "search": {
+        "propagations": 177,
+        "seconds": 448.608
+      }
+    },
+    {
+      "id": "g2",
+      "vertex": 4996,
+      "length": 130.891670308,
+      "search": {
+        "propagations": 150,
+        "seconds": 337.832
+      }
+    },
+    {
+      "id": "g3",
+      "vertex": 3922,
+      "length": 88.611502245,
+      "search": {
+        "propagations": 102,
+        "seconds": 221.949
+      }
+    }
+  ],
+  "stats": {
+    "sources_considered": 1245,
+    "propagations": 429,
+    "mode": "per-goal",
+    "clipping": true
+  },
+  "planning_seconds": 1008.389,
+  "environment": {
+    "python": "3.14.8",
+    "numpy": "2.5.4"
+  }
+}

@@ -1,0 +1,138 @@
+%% =====================================================================
+%%  metadata.tex
+%%  Khai báo toàn bộ thông tin bài báo: tiêu đề, tác giả, đơn vị,
+%%  tóm tắt, từ khóa, tác giả liên hệ, dòng "Trích dẫn bài báo này".
+%%
+%%  Các lệnh [vi] dùng cho trang bìa tiếng Việt (trang 1).
+%%  Các lệnh [en] dùng cho trang bìa tiếng Anh (trang cuối).
+%%  Nếu tắt bìa tiếng Anh (option noenglishcover) thì phần [en]
+%%  vẫn có thể để nguyên, không ảnh hưởng gì.
+%%
+%%  LƯU Ý: file này chỉ khai báo, KHÔNG in gì ra trang.
+%%         Nó được \input ngay sau \documentclass.
+%% =====================================================================
+
+%% ---------------------------------------------------------------------
+%% 1. TIÊU ĐỀ
+%%    - Viết hoa đúng chính tả, không cần IN HOA toàn bộ:
+%%      class tự xử lý phần trình bày.
+%%    - Công thức trong tiêu đề dùng $...$ như bình thường.
+%% ---------------------------------------------------------------------
+\jsttitlevi{%
+  Lập kế hoạch đường đi lai ghép cho robot tự hành
+  trong môi trường động sử dụng Voronoi có trọng số,
+  \texorpdfstring{$\beta$}{β}-complexes và giám sát logic mờ%
+}
+\jsttitleen{%
+  Hybrid Path Planning for Autonomous Mobile Robots
+  Using Weighted Voronoi Diagrams,
+  \texorpdfstring{$\beta$}{β}-complexes, and Fuzzy Logic Supervision%
+}
+
+%% ---------------------------------------------------------------------
+%% 2. LOẠI BÀI (in ở góc phải header)
+%% ---------------------------------------------------------------------
+\jstarticletypevi{Bài nghiên cứu}
+\jstarticletypeen{Research Article}
+
+%% ---------------------------------------------------------------------
+%% 3. TÁC GIẢ
+%%    Cú pháp: \jstauthorvi[chỉ số đơn vị]{Họ và tên}
+%%    - Chỉ số đơn vị in thành superscript, khớp với \jstaffiliationvi.
+%%    - Bỏ [] nếu tác giả chỉ có một đơn vị.
+%%    - Tác giả liên hệ (có dấu *) phải khai báo thêm ở mục 5.
+%% ---------------------------------------------------------------------
+\jstauthorvi[1,2]{Hoàng Minh Anh Tú}
+\jstauthorvi[1]{Trần Văn Hoài}
+\jstauthorvi[2,*]{Phan Thành An}
+
+\jstauthoren[1,2]{Hoang Minh Anh Tu}
+\jstauthoren[1]{Tran Van Hoai}
+\jstauthoren[2,*]{Phan Thanh An}
+
+%% ---------------------------------------------------------------------
+%% 4. ĐƠN VỊ CÔNG TÁC (cột trái của bìa, chữ 7 pt nghiêng)
+%%    Cú pháp: \jstaffiliationvi{chỉ số}{nội dung}
+%%    Dùng \\ để xuống dòng trong cùng một đơn vị.
+%%    Thứ tự khai báo = thứ tự hiển thị.
+%% ---------------------------------------------------------------------
+\jstaffiliationvi{1}{%
+  Khoa Khoa học và Kỹ thuật Máy tính, Trường Đại học Bách khoa,\\
+  Đại học Quốc gia Thành phố Hồ Chí Minh, Việt Nam}
+
+\jstaffiliationvi{2}{%
+  Khoa Khoa học và Kỹ thuật, Trường Đại học Quốc tế,\\
+  Đại học Quốc gia Thành phố Hồ Chí Minh, Việt Nam}
+
+\jstaffiliationen{1}{%
+  Faculty of Computer Science and Engineering,
+  Ho Chi Minh City University of Technology,\\
+  Viet Nam National University Ho Chi Minh City, Vietnam}
+
+\jstaffiliationen{2}{%
+  Faculty of Engineering,
+  International University,\\
+  Viet Nam National University Ho Chi Minh City, Vietnam}
+
+%% ---------------------------------------------------------------------
+%% 5. TÁC GIẢ LIÊN HỆ (khối dưới đơn vị, có đường kẻ ngang phía trên)
+%%    Cú pháp: \jstcorrespondingvi{Tên}{Địa chỉ}{Email}
+%% ---------------------------------------------------------------------
+\jstcorrespondingvi{Phan Thành An}%
+  {Khoa Khoa học và Kỹ thuật, Trường Đại học Quốc tế, ĐHQG-HCM}%
+  {ptan@hcmiu.edu.vn}
+
+\jstcorrespondingen{Phan Thanh An}%
+  {Faculty of Engineering, International University, VNU-HCM}%
+  {ptan@hcmiu.edu.vn}
+
+%% ---------------------------------------------------------------------
+%% 6. TÓM TẮT + TỪ KHÓA
+%%    Tóm tắt 9 pt, từ khóa 10 pt, nằm trong khung nền xanh nhạt.
+%%    Viết thành một đoạn văn liền, không xuống dòng, không bullet.
+%% ---------------------------------------------------------------------
+\jstabstractvi{%
+  Bài báo trình bày một khung lập kế hoạch đường đi lai ghép cho robot
+  tự hành trong môi trường có vật cản động. Khung gồm ba lớp: biểu diễn
+  hình học bằng Voronoi có trọng số và $\beta$-complexes, lấy mẫu
+  đường đi bằng RRT* có hướng dẫn, và giám sát an toàn bằng logic mờ.
+  Kết quả thử nghiệm trên robot vi sai cho thấy thời gian lập kế hoạch
+  giảm đáng kể so với phương pháp cơ sở trong khi vẫn giữ được tính
+  không va chạm của quỹ đạo.%
+}
+\jstkeywordsvi{%
+  lập kế hoạch đường đi; Voronoi có trọng số; $\beta$-complexes;
+  RRT*; logic mờ; robot tự hành%
+}
+
+\jstabstracten{%
+  This paper presents a hybrid path-planning framework for autonomous
+  robots operating in dynamic environments. The framework has three
+  layers: geometric representation by weighted Voronoi diagrams and
+  $\beta$-complexes, guided sampling by RRT*, and safety supervision
+  by fuzzy logic. Experiments on a differential-drive robot show that
+  planning time is substantially reduced compared with baseline
+  planners while collision-free trajectories are preserved.%
+}
+\jstkeywordsen{%
+  path planning; weighted Voronoi diagram; $\beta$-complexes;
+  RRT*; fuzzy logic; autonomous robot%
+}
+
+%% ---------------------------------------------------------------------
+%% 7. DÒNG "TRÍCH DẪN BÀI BÁO NÀY" (ô xanh ở đáy bìa)
+%%    Điền theo đúng định dạng của tạp chí khi đã có số phát hành.
+%% ---------------------------------------------------------------------
+\jstcitationvi{%
+  Tú HMA, Hoài TV, An PT. Lập kế hoạch đường đi lai ghép cho robot
+  tự hành trong môi trường động sử dụng Voronoi có trọng số,
+  $\beta$-complexes và giám sát logic mờ.
+  Tạp chí Khoa học và Công nghệ ĐHQG-HCM, chuyên san Kỹ thuật và
+  Công nghệ. 2026;Tập(So):trang.%
+}
+\jstcitationen{%
+  Tu HMA, Hoai TV, An PT. Hybrid path planning for autonomous mobile
+  robots using weighted Voronoi diagrams, $\beta$-complexes, and
+  fuzzy logic supervision.
+  VNUHCM Journal of Engineering and Technology. 2026;Vol(Issue):pages.%
+}

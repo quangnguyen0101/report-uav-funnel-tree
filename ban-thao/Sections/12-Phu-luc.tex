@@ -1,0 +1,100 @@
+%% ---------------------------------------------------------------------
+%% 12 - PHỤ LỤC
+%% ---------------------------------------------------------------------
+
+\section*{Phụ lục A. Vật liệu bổ sung và tái lập}\label{app:repro}
+
+Mã nguồn, dữ liệu và kết quả của quy trình được công bố tại
+\cite{kien2026repo}. Bảng~\ref{tab:appendix-files} ánh xạ từng thành phần chức
+năng sang tệp hoặc lệnh tương ứng, để người đọc muốn tái lập không phải suy đoán
+từ tên thư mục. Các đường dẫn chỉ mang tính chỉ dẫn; kết quả trong bài được xác
+định bằng SHA ghi trong tệp, không bằng vị trí tệp.
+
+\begin{table*}[!t]
+  \caption{Ánh xạ thành phần chức năng sang tệp/lệnh trong kho mã nguồn.}
+  \label{tab:appendix-files}
+  {\fontsize{7}{8.6}\selectfont
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{@{}lp{150pt}p{170pt}@{}}
+    \toprule
+    Thành phần & Tệp/lệnh & Đầu ra \\
+    \midrule
+    Chuẩn hóa scene & \texttt{tools/data/standardize.py} &
+      \texttt{city.standardized.glb} \\
+    Dựng bề mặt & \texttt{tools/data/triangulation.py} &
+      bề mặt \texttt{.off} + tham số \\
+    Chọn START/GOAL & \texttt{tools/data/set\_start\_goal.py} &
+      mission JSON \\
+    Trực quan hóa dữ liệu & \texttt{tools/data/data\_viz.py} &
+      ảnh mesh + sidecar \\
+    Lập tuyến & \texttt{tools/plan/run\_funnel.py} &
+      route JSON \\
+    Vẽ tuyến & \texttt{tools/plan/route\_viz.py} &
+      ảnh route \\
+    Đối chiếu tham chiếu & \texttt{tools/plan/compare.py} &
+      \texttt{compare.json}, \texttt{summary.json} \\
+    So nhiều lần chạy & \texttt{tools/plan/compare\_runs.py} &
+      bảng Markdown/JSON + ảnh \\
+    Dựng world & \texttt{tools/simulate/build\_world.py} &
+      SDF, GLB, STL, route đã rút gọn \\
+    Chạy Gazebo & \texttt{tools/simulate/run\_simulate.sh} &
+      telemetry CSV + log \\
+    Chấm telemetry & \texttt{tools/simulate/validate.py} &
+      \texttt{validation.json} + \texttt{tracking.png} \\
+    Kiểm tra ảnh & \texttt{tools/figures.py} &
+      bảng đối chiếu 3 lớp dấu \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}}
+\end{table*}
+
+\subsection*{A.1. Lệnh chạy}
+
+\begin{code}[H]
+  \lstinputlisting[style=bashcode]{Code/pipeline_commands.sh}
+  \caption{Các lệnh chạy từng giai đoạn và kiểm tra sau khi chạy.}
+  \label{code:app-commands}
+\end{code}
+
+\begin{code}[H]
+  \lstinputlisting[style=bashcode]{Code/docker_commands.sh}
+  \caption{Build image Gazebo và chạy quy trình trong container.}
+  \label{code:app-docker}
+\end{code}
+
+\subsection*{A.2. Trích tệp JSON}
+
+Hai tệp dưới đây là ví dụ về dấu vết của một lần chạy: route ghi hash và tham số
+tìm kiếm; validation ghi số đo và hai cờ.
+
+\begin{code}[H]
+  \lstinputlisting[style=jsoncode]{Code/route_excerpt.json}
+  \caption{Trích route JSON của lưới $3$ m. Trường \texttt{waypoints} được lược
+    bỏ để giữ chỗ; các trường còn lại là nguyên văn.}
+  \label{code:app-route}
+\end{code}
+
+\begin{code}[H]
+  \lstinputlisting[style=jsoncode]{Code/validation_excerpt.json}
+  \caption{Trích validation JSON của G2 lưới $4$: số dòng telemetry, các sai số,
+    tốc độ/gia tốc lớn nhất, SHA và hai cờ \texttt{valid}/\texttt{passed}.}
+  \label{code:app-validation}
+\end{code}
+
+\subsection*{A.3. Tệp đính kèm}
+
+PDF này đính kèm các tệp nhỏ để người đọc kiểm lại một lần chạy:
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item \textattachfile[color=0 0 0]{Attachments/funnel_physics.sdf}{\texttt{funnel\_physics.sdf}}
+    --- mô tả world, vật lý và plugin;
+  \item \textattachfile[color=0 0 0]{Attachments/city.sim.collision.stl}{\texttt{city.sim.collision.stl}}
+    --- collision đã decimate;
+  \item \textattachfile[color=0 0 0]{Attachments/validation_g2_cell4.json}{\texttt{validation\_g2\_cell4.json}}
+    --- kết quả chấm G2 lưới $4$;
+  \item \textattachfile[color=0 0 0]{Attachments/routes_cell3.json}{\texttt{routes\_cell3.json}}
+    --- route đầy đủ của lưới $3$;
+  \item \textattachfile[color=0 0 0]{Attachments/manifest_cell4.json}{\texttt{manifest\_cell4.json}}
+    --- manifest archive.
+\end{itemize}
+Tệp visual \texttt{city.sim.glb} (8,2 MB) không nhúng vào PDF để giữ dung lượng;
+bản đầy đủ nằm trong kho mã nguồn.

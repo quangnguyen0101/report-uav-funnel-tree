@@ -1,0 +1,32 @@
+%% ---------------------------------------------------------------------
+%% 01 - GIỚI THIỆU
+%% Đặt vấn đề, khoảng trống nghiên cứu, mục tiêu và đóng góp của bài báo.
+%% Khoảng 2-4 đoạn; trích dẫn bằng \cite{...} (biblatex, Vancouver).
+%% ---------------------------------------------------------------------
+
+\section{Giới thiệu}
+
+Lập kế hoạch đường đi là một chức năng cốt lõi của robot di động tự hành
+trong kho vận, sản xuất, cứu hộ và dịch vụ đô thị. Robot phải tìm được
+quỹ đạo không va chạm từ điểm xuất phát đến đích trong thời gian đủ ngắn,
+đồng thời hạn chế tối đa việc dừng lại để tính toán lại khi môi trường
+thay đổi \cite{karnik2021}.
+
+Các bộ lập kế hoạch dựa trên lấy mẫu như RRT và RRT* có ưu điểm là không
+phụ thuộc vào cấu trúc của không gian cấu hình, nhưng chi phí lấy mẫu
+tăng nhanh khi số chiều hoặc mật độ vật cản tăng. Ngược lại, các phương
+pháp dựa trên biểu diễn hình học như biểu đồ Voronoi cho lời giải có bảo
+đảm về khoảng cách an toàn nhưng khó thích nghi với vật cản chuyển động
+\cite{bhattacharya2017}.
+
+\emph{(Phần này là văn bản mẫu. Thay bằng nội dung thật: nêu bối cảnh,
+khoảng trống nghiên cứu, câu hỏi nghiên cứu và ba đóng góp chính của bài
+báo, mỗi đóng góp một câu.)}
+
+\subsection{Đóng góp của bài báo}
+
+Bài báo đề xuất một khung lai ghép ba lớp; các đóng góp chính gồm:
+(i)~biểu diễn miền lấy mẫu bằng Voronoi có trọng số kết hợp
+$\beta$-complexes; (ii)~cơ chế hướng dẫn lấy mẫu cho RRT* dựa trên cấu
+trúc hình học đó; và (iii)~bộ giám sát logic mờ bảo đảm an toàn khi vật
+cản di chuyển.

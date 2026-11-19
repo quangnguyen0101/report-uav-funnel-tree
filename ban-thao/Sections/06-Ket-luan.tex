@@ -1,0 +1,50 @@
+%% ---------------------------------------------------------------------
+%% 06 - KẾT LUẬN
+%% ---------------------------------------------------------------------
+
+\section{Kết luận}\label{sec:concl}
+
+Nghiên cứu đã cài đặt thuật toán Funnel Tree cùng Thủ tục 2 (\emph{clip off
+funnels}) bằng Python (NumPy cho mảng, không dùng thư viện hình học), kiểm chứng thuật toán trên bộ lưới đa
+diện chuẩn, rồi đưa kết quả trắc địa vào một quy trình mô phỏng UAV trên mô hình
+thành phố ba chiều.
+
+Trên bộ lưới kiểm thử gồm 9 mesh (7 bề mặt kín với các dạng cầu và xuyến, 2 bề mặt
+mở có cạnh biên), năm lưới có kết quả tham chiếu khớp tới bốn chữ số thập phân
+trên tổng 76 đỉnh, sai số tương đối lớn nhất $1{,}7\times10^{-5}$; bốn mesh còn
+lại chỉ được kiểm tra khả năng chạy và tính nhất quán nội tại. Nghiên cứu trường
+hợp điển hình trên \texttt{cliff} cho thấy tuyến tới đỉnh vách cắt ngang một cạnh
+tam giác tại điểm nội tại, đúng ưu thế của phương pháp trắc địa so với xấp xỉ qua
+đỉnh; cơ chế cắt tỉa được bật trong mọi lần chạy và không làm sai kết quả trên bộ
+dữ liệu có reference, nhưng repo không ghi log từng sự kiện clip nên bài không báo
+số nút cây cụ thể.
+
+Ở phần mô phỏng, ba bề mặt dẫn đường dựng từ mô hình thành phố \num{301490} tam
+giác có \num{2295}, \num{3355} và \num{5913} đỉnh, tương ứng với ô danh nghĩa $5$,
+$4$ và $3$ m. Trên lưới $4$ m, ba tuyến từ một nguồn đến ba đích dài
+\num{142.909050}, \num{127.295935} và \num{86.194146} đơn vị mô phỏng. Chín
+chuyến bay (ba lưới $\times$ ba đích) đều hợp lệ; bảy chuyến đạt mốc bám tuyến
+$1$ m, trong đó lưới $4$ m là cấu hình duy nhất đạt cả ba với sai số lớn nhất
+$0{,}399$--$0{,}601$ m. Lưới $5$ m và $3$ m mỗi lưới trượt đích G2 ($1{,}022$ m
+và $1{,}381$ m): ca thứ nhất do waypoint không đều ở góc cua, ca thứ hai do vách
+dốc $45^\circ$ đòi leo nhanh hơn giới hạn $5$ m/s $\cdot$ $3$ m/s$^2$. Kết quả
+cho thấy việc chọn kích thước ô phải đi cùng dự phòng ngang, độ dốc và tham số
+bay; không có cấu hình nào có sai số nhỏ nhất ở mọi đích.
+
+Về vận hành, quy trình ba stage \texttt{data} $\to$ \texttt{plan} $\to$
+\texttt{simulate} cùng chuỗi SHA và archive cho phép truy một con số về đúng scene,
+bề mặt, mission, route và telemetry; image Gazebo Jetty được ghim digest nên kết
+quả bay không đổi ngầm khi image đổi. Trong ba cấu hình, lưới $4$ m là lựa chọn
+làm việc cho mission hiện tại; lưới $3$ m chỉ nên dùng sau khi giảm tốc độ hoặc
+tăng gia tốc, vì vách $45^\circ$ vượt khả năng leo của profile $5$ m/s $\cdot$
+$3$ m/s$^2$. Chi phí lập tuyến tăng nhanh hơn số tam giác ($45$ $\to$ $1\,008$
+giây), nên lưới mịn hơn cần chạy ngoại tuyến hoặc tối ưu lan truyền.
+
+Các kết quả xác nhận khả năng hoạt động của quy trình trong phạm vi thực nghiệm,
+không tạo bảo đảm tối ưu cho đường bay trong không gian tự do ba chiều và không xác
+nhận khả năng vận hành UAV thực tế. Các hướng phát triển tiếp theo gồm: lặp lại mỗi
+cấu hình nhiều lần trong điều kiện tải được khống chế và giữ cố định điểm đầu cuối
+khi so kích thước ô; thêm phép kiểm tra va chạm dọc spline và hiệu chỉnh tốc độ,
+gia tốc cho vách dốc; tích hợp mô hình rotor hoặc autopilot cùng nhiễu trạng thái;
+mở rộng sang nhiều nhiệm vụ và nhiều UAV có kiểm tra xung đột; và cải tiến hiệu
+năng cài đặt Python cho lưới có hàng trăm nghìn tam giác.

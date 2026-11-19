@@ -1,0 +1,14 @@
+# Cấu hình latexmk cho template Tạp chí KHCN (VNUHCM JET).
+# Dùng:  latexmk          -> pdfLaTeX + biber + chạy lại tới khi ổn định
+#        latexmk -C       -> dọn file phụ
+#
+# Bắt buộc pdfLaTeX: template dùng vntex + bảng mã T5 để có đúng bộ font
+# tiếng Việt (VNR/VNBX/VNTI/VNSS) như bản in của tạp chí. XeLaTeX và
+# LuaLaTeX sẽ thay font và làm lệch toàn bộ metric.
+
+$pdf_mode = 1;                 # 1 = pdfLaTeX
+@default_files = ('main.tex'); # chỉ build main.tex, không build các file
+                               # trong Sections/ hay metadata.tex
+$bibtex_use = 2;               # 2 = biber (backend của biblatex)
+$max_repeat = 5;               # chạy lại cho tới khi nhãn/trang ổn định
+$pdf_previewer = '';           # không tự mở PDF khi build

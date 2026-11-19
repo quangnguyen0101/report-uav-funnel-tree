@@ -1,0 +1,61 @@
+{
+  "mesh": "cliff",
+  "mesh_sha256": "d4c9c65ad0fd6c64b4e5ae3e70a034d4761d093d02f431159fabf345fb914f75",
+  "reference": "data/expected/cliff.paths.json",
+  "source": 1,
+  "tolerance": 0.0001,
+  "vertices": 7,
+  "max_relative_error": 1.717e-05,
+  "mean_relative_error": 2.6341428571428574e-06,
+  "failures": [],
+  "stats": {
+    "sources_considered": 3,
+    "propagations": 3,
+    "clipping": true,
+    "implementation_status": "experimental; validate per mesh"
+  },
+  "paths": [
+    {
+      "vertex": 0,
+      "reference_length": 2.828427125,
+      "funnel_length": 2.828427125,
+      "relative_error": 0.0
+    },
+    {
+      "vertex": 1,
+      "reference_length": 0.0,
+      "funnel_length": 0.0,
+      "relative_error": 0.0
+    },
+    {
+      "vertex": 2,
+      "reference_length": 3.605551275,
+      "funnel_length": 3.605551275,
+      "relative_error": 0.0
+    },
+    {
+      "vertex": 3,
+      "reference_length": 3.741657387,
+      "funnel_length": 3.741657387,
+      "relative_error": 0.0
+    },
+    {
+      "vertex": 4,
+      "reference_length": 1.870828693,
+      "funnel_length": 1.870828693,
+      "relative_error": 0.0
+    },
+    {
+      "vertex": 5,
+      "reference_length": 2.285535893,
+      "funnel_length": 2.285575146,
+      "relative_error": 1.717e-05
+    },
+    {
+      "vertex": 6,
+      "reference_length": 4.063171877,
+      "funnel_length": 4.063166723,
+      "relative_error": 1.269e-06
+    }
+  ]
+}

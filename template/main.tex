@@ -1,0 +1,62 @@
+%% =====================================================================
+%%  main.tex
+%%  VNUHCM Journal of Engineering and Technology
+%%  (Tạp chí Khoa học và Công nghệ ĐHQG-HCM, chuyên san Kỹ thuật & Công nghệ)
+%%
+%%  CẤU TRÚC FILE
+%%    main.tex         <- file này: chỉ khai báo class và \input các phần
+%%    vnuhcmjet.cls    <- toàn bộ định dạng (khổ giấy, font, header, bìa)
+%%    metadata.tex     <- tiêu đề, tác giả, đơn vị, tóm tắt, từ khóa
+%%    Sections/*.tex    <- nội dung từng mục, sửa trực tiếp các file này
+%%    refs.bib         <- tài liệu tham khảo (biblatex + biber, Vancouver)
+%%
+%%  BIÊN DỊCH
+%%    latexmk                 # build đầy đủ (pdfLaTeX + biber)
+%%    latexmk -C              # xoá file phụ
+%%  Chỉ dùng pdfLaTeX: vntex + T5 cho tiếng Việt. XeLaTeX/LuaLaTeX sẽ
+%%  ra font khác hẳn mẫu.
+%%
+%%  THÊM / BỚT MỤC
+%%    Tạo file mới trong Sections/ rồi thêm một dòng \input{...} ở dưới.
+%%    Tên mục nằm trong \section{...} của chính file đó.
+%% =====================================================================
+
+%% englishcover   : in thêm trang bìa tiếng Anh ở cuối (mặc định, như mẫu)
+%% noenglishcover : chỉ in bìa tiếng Việt
+\documentclass[englishcover]{vnuhcmjet}
+
+%% Toàn bộ thông tin bài báo
+\input{metadata}
+
+%% Tài liệu tham khảo
+\addbibresource{refs.bib}
+
+\begin{document}
+
+%% ---------------------------------------------------------------------
+%% TRANG 1: bìa tiếng Việt + tóm tắt + từ khóa
+%% ---------------------------------------------------------------------
+\jstcovervi
+
+%% ---------------------------------------------------------------------
+%% THÂN BÀI: 2 cột, lề trái 52 mm như mẫu
+%% ---------------------------------------------------------------------
+\jstbody
+
+\input{Sections/01-Gioi-thieu}
+\input{Sections/02-Doi-tuong-va-phuong-phap}
+\input{Sections/03-Ket-qua}
+\input{Sections/04-Thao-luan}
+\input{Sections/05-Ket-luan}
+\input{Sections/06-Danh-muc-viet-tat}
+\input{Sections/07-Xung-dot-loi-ich}
+\input{Sections/08-Dong-gop-tac-gia}
+\input{Sections/09-Cam-on}
+\input{Sections/10-Tai-lieu-tham-khao}
+
+%% ---------------------------------------------------------------------
+%% TRANG CUỐI: bìa tiếng Anh (tự bỏ qua nếu dùng option noenglishcover)
+%% ---------------------------------------------------------------------
+\jstenglishcover
+
+\end{document}

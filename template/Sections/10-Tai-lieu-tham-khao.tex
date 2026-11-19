@@ -1,0 +1,11 @@
+%% ---------------------------------------------------------------------
+%% 10 - TÀI LIỆU THAM KHẢO
+%% In danh mục từ refs.bib bằng biblatex + biber (style Vancouver).
+%% Không khai báo thủ công \bibitem. Chỉ cần \cite{...} trong bài và
+%% thêm mục vào refs.bib; latexmk sẽ tự chạy biber.
+%% Chỉ các tài liệu ĐƯỢC TRÍCH DẪN mới xuất hiện trong danh mục.
+%% ---------------------------------------------------------------------
+
+\nocite{*}   % bỏ dòng này nếu muốn danh mục chỉ còn tài liệu đã trích dẫn
+
+\printbibliography[title={Tài liệu tham khảo}]
