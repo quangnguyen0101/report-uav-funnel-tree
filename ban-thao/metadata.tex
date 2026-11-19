@@ -27,8 +27,9 @@
 %%    - Chỉ số đơn vị in thành superscript, khớp với \jstaffiliationvi.
 %%    - Dấu * đánh dấu tác giả liên hệ (khai báo thêm ở mục 5).
 %% ---------------------------------------------------------------------
-\jstauthorvi[1,*]{Phan Thành An và các tác giả khác}
-\jstauthoren[1,*]{Phan Thanh An and other authors}
+% TODO: bổ sung đầy đủ họ tên các tác giả theo quy định của tạp chí trước khi nộp.
+\jstauthorvi[1,*]{Phan Thành An}
+\jstauthoren[1,*]{Phan Thanh An}
 
 %% ---------------------------------------------------------------------
 %% 4. ĐƠN VỊ
@@ -65,15 +66,15 @@ Nghiên cứu trình bày một quy trình lập đường và kiểm chứng m�
 bị bay không người lái (Unmanned Aerial Vehicle, UAV) trong môi trường thành
 phố ba chiều. Bản triển khai Python của thuật toán Funnel Tree được kiểm chứng
 trước hết trên chín lưới đa diện chuẩn, gồm bề mặt kín, bề mặt không lồi, mặt
-xuyến và hai bề mặt mở; năm lưới có kết quả tham chiếu trùng khớp tới bốn chữ
-số thập phân; bốn lưới còn lại được dùng để kiểm tra khả năng chạy trên bề mặt
+xuyến và hai bề mặt mở; năm lưới có kết quả tham chiếu với sai số tương đối không
+vượt $10^{-4}$; bốn lưới còn lại được dùng để kiểm tra khả năng chạy trên bề mặt
 mở, bề mặt lồi và bề mặt có lỗ, không có reference độc lập. Quy trình sau đó được áp dụng cho mô hình thành phố
 \textit{Ho Chi Minh City 2025} (\num{301490} tam giác). Ba bề mặt dẫn đường được
 dựng với ô danh nghĩa $5$, $4$ và $3$ m, lần lượt có \num{2295}, \num{3355} và
 \num{5913} đỉnh; mỗi bề mặt là envelope an toàn phía trên công trình, có khoảng
 hở đứng, dự phòng ngang và vùng chuyển tiếp cao độ. Trên lưới $4$ m, ba tuyến
 từ một nguồn đến ba đích dài \num{142.909050}, \num{127.295935} và
-\num{86.194146} đơn vị mô phỏng. Các tuyến được tham số hóa bằng spline
+\num{86.194146} mét của mô hình thu nhỏ. Các tuyến được tham số hóa bằng spline
 Catmull--Rom và một profile vận tốc thang, rồi bay trong Gazebo Jetty 10.5 bằng
 mô hình khối điểm $1$ kg với điều khiển bù trước và phản hồi PD. Chín chuyến bay
 (ba lưới $\times$ ba đích) đều hợp lệ; bảy chuyến đạt mốc sai số bám $1$ m, trong
@@ -96,22 +97,22 @@ This study presents a route-planning and simulation-validation workflow for a
 single unmanned aerial vehicle in a three-dimensional city environment. The
 Python implementation of the Funnel Tree algorithm is first verified on nine
 benchmark polyhedral meshes, covering closed surfaces, a non-convex surface, a
-toroidal surface and two open surfaces; five meshes match reference results to
-four decimal places; the remaining meshes exercise open, convex and toroidal
+toroidal surface and two open surfaces; five meshes match the reference results
+within a relative error of $10^{-4}$; the remaining meshes exercise open, convex and toroidal
 surfaces and have no independent reference. The workflow is then applied to
 the \textit{Ho Chi Minh City 2025} city model (\num{301490} triangles). Three
 navigation surfaces are built with nominal cell sizes of $5$, $4$ and $3$ m,
 with \num{2295}, \num{3355} and \num{5913} vertices, respectively; each is a
 safety envelope above the buildings with a vertical clearance, a horizontal
 margin and elevation transitions. On the $4$ m grid, three routes from one
-source to three destinations are \num{142.909050}, \num{127.295935} and
-\num{86.194146} simulation units long. The routes are parameterized by a
+source to three destinations are 142.909050, 127.295935 and 86.194146 metres of
+the scaled model long. The routes are parameterized by a
 Catmull--Rom spline and a single trapezoidal speed profile, and flown in Gazebo
 Jetty 10.5 with a $1$ kg point-mass model under feedforward and PD control. All
 nine flights (three grids $\times$ three goals) are valid; seven meet the $1$ m
 tracking target, and the $4$ m grid is the only configuration that meets it on
-all three goals, with maximum errors of $0{,}399$--$0{,}601$ m. The $5$ m and
-$3$ m grids each miss one goal ($1{,}022$ m and $1{,}381$ m): the first from
+all three goals, with maximum errors of 0.399--0.601 m. The 5 m and 3 m grids
+each miss one goal (1.022 m and 1.381 m): the first from
 uneven waypoint spacing at a corner, the second from a $45^\circ$ ramp that
 demands a climb faster than the $5$ m/s $\cdot$ $3$ m/s$^2$ limit. The results
 support the feasibility of the integrated workflow for the three tested
@@ -129,13 +130,13 @@ geodesic%
 %% 7. KHUNG "TRÍCH DẪN BÀI BÁO NÀY" Ở ĐÁY BÌA
 %% ---------------------------------------------------------------------
 \jstcitationvi{%
-An PT và cs. Lập đường trên bề mặt dẫn đường thành phố ba chiều bằng Funnel
+An PT. Lập đường trên bề mặt dẫn đường thành phố ba chiều bằng Funnel
 Tree và kiểm chứng mô phỏng UAV. Tạp chí Khoa học và Công nghệ ĐHQG-HCM,
 chuyên san Kỹ thuật và Công nghệ. 2026.%
 }
 
 \jstcitationen{%
-An PT, et al. Surface-Constrained Route Planning on a 3D City Navigation
+An PT. Surface-Constrained Route Planning on a 3D City Navigation
 Surface Using Funnel Trees and UAV Simulation Validation. VNUHCM Journal of
 Engineering and Technology. 2026.%
 }

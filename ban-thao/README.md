@@ -19,7 +19,7 @@ latexmk -C       # dọn file phụ
 Chỉ dùng **pdfLaTeX** (vntex + bảng mã T5). Cần `biber`, gói `biblatex-vancouver`,
 `siunitx`, `subcaption`, `listings`, `makecell`, `adjustbox`.
 
-Kết quả hiện tại: **30 trang**, khổ `610,43 × 789,04 bp` (216 × 279 mm).
+Kết quả hiện tại: **31 trang**, khổ `610,43 × 789,04 bp` (216 × 279 mm).
 
 ---
 
@@ -38,16 +38,16 @@ Kết quả hiện tại: **30 trang**, khổ `610,43 × 789,04 bp` (216 × 279 
 | `Sections/06…11` | kết luận, danh mục viết tắt, xung đột, đóng góp, cảm ơn, TLTK |
 | `Figures/` | 19 hình, 39 ảnh thành phần (41 lượt chèn): mesh, route_viz, 3 bề mặt, cận cảnh, tracking và 6 ảnh Gazebo |
 | `Code/` | 3 đoạn mã Python + 4 trích JSON + 2 script lệnh (`pipeline`, `docker`) |
-| `refs.bib` | 11 tài liệu, Vancouver (biblatex + biber) |
+| `refs.bib` | 5 tài liệu, Vancouver (biblatex + biber) |
 
-Số lượng: **17 bảng**, **19 hình**, **8 khối mã** (3 Python + 3 JSON + 2 bash) (tự đánh số Bảng/Hình/Mã).
+Số lượng: **18 bảng**, **19 hình**, **8 khối mã** (3 Python + 3 JSON + 2 bash) (tự đánh số Bảng/Hình/Mã).
 
 ---
 
 ## 3. Thông tin cần thầy xác nhận trước khi gửi
 
-1. **Tác giả**: đang để `Phan Thành An và các tác giả khác` (đúng như bản nháp
-   `Drone.zip`). Cần điền danh sách đầy đủ trong `metadata.tex`, mục 3.
+1. **Tác giả**: hiện chỉ ghi `Phan Thành An`. Nếu bài có đồng tác giả, cần điền
+   đầy đủ họ tên trong `metadata.tex`, mục 3 (tạp chí không nhận "và các tác giả khác").
 2. **Tác giả liên hệ**: Phan Thành An, `thanhan@hcmut.edu.vn`, IMACS – HCMUT
    (lấy theo mẫu `Tu-4.1.pdf`).
 3. **Thể loại**: `Bài nghiên cứu` / `Research Article`.
@@ -97,7 +97,7 @@ Phần mô phỏng được viết lại và mở rộng theo trạng thái repo
 - **Sửa sai số bám tuyến**: bản cũ báo 0,002243–0,002451, thực chất là sai số
   tái dựng route ngoại tuyến. Telemetry động trong repo cho
   `max_error` 0,365–1,381 m; 4 m đạt mốc 1 m ở cả ba đích (0,399/0,591/0,601),
-  5 m và 3 m mỗi lưới trượt G2 (1,022 m và 1,381 m). Bảng 13 và các Hình 15--16 ghi đúng đại lượng này.
+  5 m và 3 m mỗi lưới trượt G2 (1,022 m và 1,381 m). Bảng 14 và các Hình 16--17 ghi đúng đại lượng này.
 - **Mô hình quỹ đạo mới**: spline Catmull–Rom + một profile vận tốc thang
   $v_{\max}=5$, $a_{\max}=3$, khởi đầu chậm 2 s, không dừng ở waypoint; thay
   cho quintic dừng–đi từng đoạn. Gazebo Harmonic được thay bằng **Gazebo Jetty

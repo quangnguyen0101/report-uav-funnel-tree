@@ -20,7 +20,7 @@ ghi đè lên lần trước. Đường dẫn tệp cụ thể nằm ở Phụ l
 Mục này mô tả chi tiết hai nguồn dữ liệu thực nghiệm, định dạng và data dictionary
 của chúng, kết quả kiểm tra chất lượng dữ liệu, phân tích khám phá (EDA) kèm trực
 quan hóa hình ảnh không gian 3D, từ đó rút ra các insight ảnh hưởng trực tiếp tới
-khâu đánh giá thực nghiệm ở Mục~\ref{sec:results}.
+khâu đánh giá thực nghiệm ở Mục~\secref{sec:results}.
 
 \subsection{Nguồn dữ liệu}
 
@@ -38,7 +38,7 @@ khâu đánh giá thực nghiệm ở Mục~\ref{sec:results}.
     cạnh biên).
   \item kèm theo là file mô hình thành phố \texttt{city.glb} (khoảng 20,5 MB, mô
     hình 3D định dạng glTF/GLB), được dùng cho quy trình mô phỏng ở
-    Mục~\ref{sec:gazebo}.
+    Mục~\secref{sec:gazebo}.
 \end{itemize}
 
 \item Kết quả tham chiếu gồm 5 tệp JSON cho các mesh \texttt{cliff},
@@ -48,17 +48,18 @@ khâu đánh giá thực nghiệm ở Mục~\ref{sec:results}.
   polyline ngắn nhất từ đỉnh nguồn tới đỉnh $i$, tọa độ các điểm uốn trắc địa làm
   tròn 4 chữ số thập phân. Hai mesh \texttt{cube} và \texttt{icosahedron} được
   dựng theo hình vẽ của bài báo gốc, còn \texttt{dome} và \texttt{terrain} là hai
-  bề mặt mở; bốn mesh này không có file tham chiếu độc lập trong repo, nên được
+  bề mặt mở; bốn mesh này không có tệp tham chiếu độc lập đi kèm, nên được
   dùng để kiểm tra khả năng chạy và tính nhất quán nội tại chứ không đối chiếu
   từng đỉnh.
 \end{enumerate}
 
 Bộ mesh kiểm thử có tính đại diện vì gồm các mesh tổng hợp với kích thước từ 7 đến
 49 đỉnh. Mặc dù nhỏ hơn quy mô 100--800 đỉnh trong bài báo \cite{an2024funnel},
-tập dữ liệu này bao quát đầy đủ các dạng cấu trúc hình học đặc trưng: đa diện lồi,
-bề mặt không lồi, bề mặt có lỗ (xuyến $\chi=0$) và bề mặt mở có cạnh biên
-($\chi=1$). Nhờ đó, tập dữ liệu đáp ứng yêu cầu kiểm chứng tính đúng đắn và độ ổn
-định của thuật toán.
+tập dữ liệu này bao gồm các dạng cấu trúc hình học đặc trưng: đa diện lồi, bề
+mặt không lồi, bề mặt có lỗ (xuyến $\chi=0$) và bề mặt mở có cạnh biên ($\chi=1$).
+Nhờ đó, tập dữ liệu cho phép kiểm tra thuật toán trên nhiều loại biên và tô pô
+khác nhau. Với quy mô nhỏ, kết quả được đọc là kiểm chứng tính đúng; độ ổn định ở
+quy mô lớn chưa được khảo sát.
 
 \subsection{Mô tả dữ liệu và Data Dictionary}
 
@@ -182,10 +183,10 @@ tuyến):
 
 Về tập kết quả tham chiếu, 5/9 mesh có file \texttt{.paths.json} trong
 tham chiếu; bốn mesh còn lại (\texttt{cube}, \texttt{icosahedron},
-\texttt{dome}, \texttt{terrain}) không có tham chiếu độc lập. Công cụ
-bước đối chiếu chạy Funnel Tree từ đúng đỉnh nguồn ghi trong
-reference, so độ dài từng polyline với dung sai tương đối $10^{-4}$ và hiện báo
-0 failure trên tổng 76 đỉnh; sai số tương đối lớn nhất là $1{,}7\times10^{-5}$
+\texttt{dome}, \texttt{terrain}) không có tham chiếu độc lập. Bước
+đối chiếu chạy Funnel Tree từ đúng đỉnh nguồn ghi trong
+reference, so độ dài từng polyline với dung sai tương đối $10^{-4}$; không có
+đỉnh nào vượt dung sai trên tổng 76 đỉnh; sai số tương đối lớn nhất là $1{,}7\times10^{-5}$
 (\texttt{cliff}), phát sinh từ việc reference chỉ giữ bốn chữ số thập phân. Với
 bốn mesh không có reference, kết quả chỉ được kiểm tra nhất quán nội tại: độ dài
 polyline dựng lại phải khớp độ dài nội tại mà phép lan truyền tính được, chứ
@@ -261,7 +262,7 @@ cả bảy mesh bề mặt kín đều được thể hiện trực quan đầy 
   \begin{subfigure}{0.46\textwidth}
     \centering
     \includegraphics[width=\linewidth]{Figures/crop/repo_cube.png}
-    \caption{\texttt{cube} ($V=8$, $F=12$, $s=4$)}
+    \caption{\texttt{cube} ($V=8$, $F=12$, $s=0$)}
   \end{subfigure}\hfill
   \begin{subfigure}{0.46\textwidth}
     \centering
@@ -287,7 +288,7 @@ Hình~\ref{fig:view-layers} minh họa hai lớp thông tin mà quy trình đố
 cho mesh \texttt{J17}: panel trái là đường tham chiếu phủ lên mesh; panel phải là
 tập route do công cụ vẽ tuyến sinh, tức kết quả của Funnel Tree cho mọi đỉnh
 đích. Hai panel dùng cùng dữ liệu đầu vào nhưng khác nguồn đường, nhờ đó có
-thể so trực tiếp bằng mắt trước khi so độ dài ở Mục~\ref{sec:results}.
+thể so trực tiếp bằng mắt trước khi so độ dài ở Mục~\secref{sec:results}.
 
 \begin{figure*}[!t]
   \centering
@@ -365,20 +366,20 @@ quan trọng, định hình trực tiếp phương pháp đánh giá thực nghi
   \item \textbf{Độ phong phú về dạng hình học nhưng quy mô còn nhỏ so với bài
     báo:} dữ liệu kiểm thử đã bao quát từ đa diện lồi, không lồi, dạng xuyến đến
     bề mặt mở, nhưng kích thước tối đa mới đạt $V=49$ đỉnh (so với 100--800 đỉnh ở
-    \cite{an2024funnel}). Do đó, các thí nghiệm ở Mục~\ref{sec:results} đóng vai
+    \cite{an2024funnel}). Do đó, các thí nghiệm ở Mục~\secref{sec:results} đóng vai
     trò kiểm chứng tính đúng đắn và độ ổn định thuật toán, chưa phải là phép đo
     hiệu năng trên dữ liệu lớn.
   \item \textbf{Khác biệt thang đo khoảng 100 lần giữa \texttt{demo\_mesh} và các
-    mesh khác:} mọi so sánh sai số ở Mục~\ref{sec:results} bắt buộc phải dùng sai
+    mesh khác:} mọi so sánh sai số ở Mục~\secref{sec:results} bắt buộc phải dùng sai
     số tương đối, không dùng sai số tuyệt đối khi đánh giá gộp các mô hình.
-  \item \textbf{Độ tin cậy của output tham chiếu:} 5/9 mesh có file tham chiếu
-    tham chiếu; bước đối chiếu so 76 đỉnh với
-    ngưỡng tương đối $10^{-4}$ và hiện báo 0 failure. Bốn mesh còn lại không có
+  \item \textbf{Độ tin cậy của output tham chiếu:} 5/9 mesh có tệp tham chiếu;
+    bước đối chiếu so 76 đỉnh với ngưỡng tương đối $10^{-4}$ và không có đỉnh nào
+    vượt ngưỡng. Bốn mesh còn lại không có
     tham chiếu độc lập, nên chỉ dùng để kiểm tra khả năng chạy trên bề mặt lồi,
     bề mặt mở và bề mặt có lỗ.
   \item \textbf{Mô hình thành phố \texttt{city.glb} là tiền đề cho bài toán đô thị
     thực tế:} file \texttt{city.glb} (khoảng 20,5 MB) nằm trong
     dữ liệu gốc. File này được đưa vào tính toán ở phần mô phỏng
-    (Mục~\ref{sec:gazebo}), nơi mô hình thành phố được chuyển thành bề mặt dẫn
+    (Mục~\secref{sec:gazebo}), nơi mô hình thành phố được chuyển thành bề mặt dẫn
     đường tam giác hóa để lập tuyến cho UAV.
 \end{enumerate}

@@ -28,7 +28,7 @@
 \sisetup{
   output-decimal-marker={,},
   group-separator={\,},
-  group-minimum-digits=5,
+  group-minimum-digits=4,
   group-digits=integer,
   detect-all
 }
@@ -116,6 +116,9 @@
 %% --- Định nghĩa dùng chung ---
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+%% Các \section của lớp này là unnumbered nên \ref trả về rỗng; tham chiếu mục
+%% bằng tên mục (nameref) để không còn câu dạng "ở Mục .".
+\newcommand{\secref}[1]{\hyperref[#1]{\nameref*{#1}}}
 
 %% Danh mục tài liệu tham khảo của bản thảo này hơi dày hơn mẫu một chút
 %% (giãn cách mục 1 bp, giãn dòng 12,3 bp) để không còn 2 dòng tràn sang

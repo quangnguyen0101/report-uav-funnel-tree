@@ -11,9 +11,11 @@ diện --- bản ba chiều của đa giác: lập phương, lăng trụ, \ldots
 $n$ tam giác. Hai điểm $a,b$ trên $P$ nối với nhau bằng một đường nằm trọn trên
 $P$; trong số mọi đường đó có đường ngắn nhất, ký hiệu $SP(a,b)$. Khi xét trong
 một tập con $S$ của bề mặt, ký hiệu $SP_S(a,b)$ nghĩa là đường ngắn nhất
-\emph{bị giới hạn trong} $S$ \cite{an2024funnel}. Nghiên cứu giới hạn ở trường
-hợp polytope lồi (nối hai điểm bất kỳ bằng đoạn thẳng luôn nằm trong khối);
-trường hợp không lồi đi theo cách xử lý tương ứng mà bài báo ghi chú là mở rộng.
+\emph{bị giới hạn trong} $S$ \cite{an2024funnel}. Phần lý thuyết của bài báo
+gốc giới hạn ở trường hợp polytope lồi (nối hai điểm bất kỳ bằng đoạn thẳng luôn
+nằm trong khối). Bản triển khai của nghiên cứu này chạy thêm trên mesh không lồi
+và mesh mở như một mở rộng thực nghiệm; các trường hợp đó không kèm bảo đảm tối
+ưu, và kết quả chỉ được đọc trong phạm vi kiểm chứng đã nêu.
 
 Với một đường $\gamma$ trên bề mặt, tại mỗi điểm $w$ của $\gamma$ đo góc trái
 $\alpha_{wl}$ và góc phải $\alpha_{wr}$; $\gamma$ được gọi là \emph{straightest
@@ -78,8 +80,8 @@ $[q,v]$ dẫn tới đỉnh đích $v$.
     \node at (2.5,1.1) {$S$};
   \end{tikzpicture}
   \caption{Cấu trúc phễu: cusp $s$, left border $SP(s,p)$, right border $SP(s,q)$
-    và cạnh $[q,v]$ dẫn tới direct destination $v$. Đây là sơ đồ khái niệm, không
-    phải ảnh kết quả từ repo.}
+    và cạnh $[q,v]$ dẫn tới direct destination $v$. Đây là sơ đồ khái niệm vẽ bằng TikZ,
+    không phải ảnh kết quả thực nghiệm.}
   \label{fig:funnel-cusp}
 \end{figure}
 
@@ -110,13 +112,14 @@ experiment}):
 \begin{description}
   \item[Dữ liệu vào] bộ mesh --- mỗi mesh là một tập cấu trúc (tập đỉnh, tập mặt,
     quan hệ kề), sinh bằng mã nguồn trong nghiên cứu; đặc trưng của từng mesh (số
-    đỉnh, số mặt, độ cao, số cạnh biên) được mô tả ở Mục~\ref{sec:data}.
+    đỉnh, số mặt, độ cao, số cạnh biên) được mô tả ở Mục~\secref{sec:data}.
   \item[Biến đo được] độ dài đường đi $|SP(s,v)|$, sai số tương đối so với
     reference, số lần lan truyền $P$, thời gian chạy và các sai số bám tuyến từ
     telemetry.
   \item[Chuẩn đối chiếu] vì đây là bài toán có đáp án chính xác, ``nhãn'' thay thế
-    bằng các polyline tham chiếu độc lập cho 5 mesh nhỏ. Bốn mesh không có reference và bề mặt thành phố không có bộ giải độc lập
-    trong repo, nên chỉ được kiểm tra khả năng chạy và tính nhất quán nội tại.
+    bằng các polyline tham chiếu độc lập cho 5 mesh nhỏ. Bốn mesh không có
+    reference và bề mặt thành phố không có bộ giải độc lập đi kèm, nên chỉ được
+    kiểm tra khả năng chạy và tính nhất quán nội tại.
     Quy trình: sinh mesh $\to$ chạy thuật toán $\to$ đối chiếu độ dài với reference
     $\to$ tổng hợp thành bảng số liệu.
 \end{description}
@@ -127,7 +130,7 @@ lệch xác suất để đo, chỉ có sai số giữa hai giá trị số th�
 
 \subsection{Các thuật toán sử dụng}
 
-Theo Phan, Hoai và Thinh, nhánh phương pháp Chen và Han duy trì các cửa sổ trên bề
+Theo An, Hoài và Thịnh, nhánh phương pháp Chen và Han duy trì các cửa sổ trên bề
 mặt đã trải phẳng và lan truyền chúng qua các mặt kề nhau; đây là cơ sở để bài
 báo đối sánh với Funnel Tree \cite{an2024funnel}.
 
@@ -187,8 +190,9 @@ Sau khi lan truyền, polyline ứng viên được tái dựng bằng cách tr�
 trong phương pháp gốc. Đối với bề mặt có cấu hình không lồi, bản triển khai xét
 thêm các nguồn phụ tại những đỉnh có tổng góc mặt vượt $2\pi$ theo ngưỡng số của
 chương trình, rồi ghép các đoạn đường giữa nguồn và đích thông qua một đồ thị có
-trọng số. Đồ thị này được tìm kiếm bằng A* với heuristic
-$h(v)=\norm{v-g}$; khoảng cách thẳng trong $\R^3$ là cận dưới cho độ dài một đường
+trọng số. Đồ thị này được tìm kiếm bằng A* với heuristic $h(v)=\norm{v-g}$
+(khi heuristic bị tắt, hàng đợi ưu tiên thoái hóa thành Dijkstra); khoảng cách
+thẳng trong $\R^3$ là cận dưới cho độ dài một đường
 bị ràng buộc nằm trên bề mặt, nên A* chỉ dùng để chọn các đoạn ứng viên trong đồ
 thị nguồn phụ, không thay bề mặt bằng đồ thị cạnh tam giác đơn thuần. Sau tái dựng,
 chương trình kiểm tra đường thuộc lưới và kiểm tra tính nhất quán giữa độ dài lan
@@ -221,8 +225,9 @@ Bảng~\ref{tab:chenhan-vs-funnel} tóm tắt đối sánh hai nhánh theo bài 
 
 Funnel tree được chọn vì ba lý do: (i) cây một nguồn -- mọi đích trùng khớp trực
 tiếp với yêu cầu kho -- mọi khách; (ii) cùng độ phức tạp $O(n^2)$ nhưng ít phép
-toán hơn; (iii) cài đặt bằng Python gọn, chỉ cần NumPy cho mảng và thư viện chuẩn,
-không cần thư viện hình học. Kết quả cài đặt được đối chiếu với các đầu ra tham
+toán hơn; (iii) lõi thuật toán cài đặt bằng Python gọn, chỉ cần NumPy cho mảng và thư
+viện chuẩn; Shapely chỉ dùng ở công cụ dựng và kiểm tra bề mặt, không tham gia
+tìm đường. Kết quả cài đặt được đối chiếu với các đầu ra tham
 chiếu đi kèm bộ mã nguồn của nghiên cứu \cite{quangnguyen2025}.
 
 \subsection{Chỉ số đánh giá}

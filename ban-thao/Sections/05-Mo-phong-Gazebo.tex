@@ -42,8 +42,11 @@ phân phối theo giấy phép CC BY 4.0 \cite{cityasset}. Mô hình gốc dùng
 làm phương thẳng đứng và gồm \num{301490} tam giác sau khi áp dụng các phép biến
 đổi của scene. Để phù hợp với Gazebo, tọa độ được đổi theo
 $(X,Y,Z)\mapsto(X,-Z,Y)$ rồi tịnh tiến và co giãn đều sao cho kích thước ngang
-lớn nhất bằng $200$ đơn vị mô phỏng. Các khoảng cách trong bài vì vậy được ghi
-bằng đơn vị mô phỏng, chưa được xác lập là khoảng cách địa lý đo bằng mét.
+lớn nhất bằng $200$ đơn vị. Gazebo đọc một đơn vị cảnh là một mét, nên các đại
+lượng của phần mô phỏng ($h$, $\delta$, $r$, vận tốc, sai số bám) được ghi theo
+mét. Vì scene đã được co giãn, con số mét này là mét của mô hình thu nhỏ, không
+phải khoảng cách địa lý thực của TP.HCM; độ dài tuyến chỉ so sánh được giữa các
+cấu hình trong cùng scene.
 
 Bề mặt dẫn đường là một envelope an toàn phía trên công trình, không phải địa
 hình hay mái nhà. Bề mặt được dựng trên miền chữ nhật bao phủ toàn bộ giới hạn
@@ -122,12 +125,12 @@ cuối, không chỉ ảnh hưởng của $h$.
 
 \begin{figure*}[!t]
   \centering
-  \begin{subfigure}{0.66\textwidth}
+  \begin{subfigure}{0.60\textwidth}
     \centering
     \includegraphics[width=\linewidth]{Figures/crop/repo_surface5.png}
     \caption{Lưới $5$ m: 2\,295 đỉnh, 4\,400 tam giác.}
   \end{subfigure}\par\vspace{2pt}
-  \begin{subfigure}{0.66\textwidth}
+  \begin{subfigure}{0.60\textwidth}
     \centering
     \includegraphics[width=\linewidth]{Figures/crop/repo_surface4.png}
     \caption{Lưới $4$ m: 3\,355 đỉnh, 6\,480 tam giác.}
@@ -197,20 +200,16 @@ ngựa” mà tuyến phải đi qua. Đây là lý do đường đi trên bề 
   \label{fig:routes-detail}
 \end{figure*}
 
-Hình~\ref{fig:city-data} cho thấy hai mức thông tin khác nhau. Panel (a) là scene
-thành phố sau chuẩn hóa: các khối công trình được tô theo độ cao, không mang nhãn
-ngữ nghĩa. Panel (b) là bề mặt dẫn đường: các ô phủ kín miền thành phố, cao độ
-nhấp nhô theo công trình bên dưới nhưng không sao chép mái nhà, và các vùng dốc
-nối các cao độ lân cận. So sánh hai panel cho thấy envelope nằm phía trên công
-trình, đúng vai trò mặt đi được của UAV chứ không phải bản sao địa hình.
 
 \subsection{Lập tuyến và đối chiếu tham chiếu}\label{sec:stage-plan}
 
 Funnel Tree chạy trên từng mission. Với mission nhiều goal, mỗi goal được tìm
 trong một lượt riêng: một lượt chung giữ frontier theo goal xa nhất và làm số lần
-lan truyền tăng mạnh trên bề mặt thành phố. Thuật toán chạy Dijkstra trên các đỉnh
-có góc khuyết âm, dùng khoảng cách Euclid tới goal gần nhất làm heuristic; mỗi
-đỉnh được settle một lần rồi lan truyền phễu. Giới hạn thời gian áp cho từng lượt
+lan truyền tăng mạnh trên bề mặt thành phố, nên chế độ \texttt{per-goal} được
+chọn cho phần thành phố. Đánh đổi là ưu thế một nguồn -- mọi đích của thuật toán
+không được khai thác trọn vẹn. Trên đồ thị nguồn phụ, thuật toán dùng A* với
+heuristic Euclid $h(v)=\norm{v-g}$ (khi tắt heuristic, hàng đợi ưu tiên thoái hóa
+thành Dijkstra); mỗi đỉnh được settle một lần rồi lan truyền phễu. Giới hạn thời gian áp cho từng lượt
 tìm, giới hạn số nút chặn lan truyền bùng nổ, và Thủ tục 2 được bật.
 
 Mỗi route ghi waypoint 3D, độ dài (tổng Euclid giữa các waypoint), số lần lan
@@ -222,8 +221,8 @@ với dung sai $0{,}1$ dùng cho chuyến bay; sau rút gọn, số waypoint mà
 sự bay là $27/25/24$ (lưới $5$), $27/24/26$ (lưới $4$) và $30/38/33$ (lưới $3$).
 
 \begin{table*}[!t]
-  \caption{Độ dài tuyến và chi phí lập tuyến trên ba bề mặt. $L$ tính bằng đơn vị
-    mô phỏng; $w$ là số waypoint trước khi rút gọn; $P$ là số lần lan truyền của
+  \caption{Độ dài tuyến và chi phí lập tuyến trên ba bề mặt. $L$ tính bằng mét của
+    mô hình thu nhỏ; $w$ là số waypoint trước khi rút gọn; $P$ là số lần lan truyền của
     từng goal; $T_{\rm plan}$ là thời gian tường của cả ba lượt tìm.}
   \label{tab:planning}
   {\fontsize{7}{8.6}\selectfont
@@ -257,9 +256,42 @@ phần khác đến từ điểm đích được snap lại như đã nêu.
 
 Năm mesh nhỏ có đường tham chiếu độc lập; bước đối chiếu chạy Funnel từ đúng đỉnh
 nguồn ghi trong tham chiếu, so độ dài từng polyline với dung sai tương đối
-$10^{-4}$ và hiện báo 0 failure trên tổng 76 đỉnh. Bốn mesh còn lại và bề mặt
-thành phố không có tham chiếu độc lập, nên không có tuyên bố tối ưu cho tuyến
-thành phố. Hình~\ref{fig:routes-small} minh họa đầu ra của công cụ vẽ tuyến trên
+$10^{-4}$; không có đỉnh nào vượt dung sai trên tổng 76 đỉnh. Bốn mesh còn lại và bề mặt
+thành phố không có tham chiếu độc lập, nên không có bộ giải thứ hai để khẳng định
+tối ưu.
+
+Thay vào đó, tuyến thành phố được kiểm tra bằng một cặp cận độc lập trên chính bề
+mặt lưới $3$ m (tệp bề mặt có tám ký tự đầu SHA256 là \texttt{9cec5d09}, trùng
+dòng lưới $3$ trong Bảng~\ref{tab:surfaces}). Cận dưới là khoảng cách Euclid $d_E=\norm{x_g-x_s}$, vì mọi đường
+trên bề mặt không ngắn hơn đoạn thẳng trong không gian. Cận trên $\ell_G$ là độ
+dài đường đi ngắn nhất trên đồ thị cạnh của lưới (Dijkstra theo trọng số là độ dài
+cạnh); đường này nằm trọn trên bề mặt nên không thể ngắn hơn đường trắc địa. Mọi
+độ dài Funnel Tree phải nằm trong khoảng $[d_E,\ell_G]$, và Bảng~\ref{tab:bounds}
+cho thấy cả ba tuyến đều thỏa. Đây là điều kiện cần, không phải chứng minh tối ưu:
+khoảng cách tới cận trên còn $4{,}6\,\%$, $4{,}9\,\%$ và $22{,}3\,\%$, phản ánh
+việc đường trên đồ thị cạnh bị buộc đi qua đỉnh nên vòng xa hơn, đặc biệt ở G3.
+
+\begin{table}[!t]
+  \caption{Kiểm tra kẹp độ dài tuyến trên lưới $3$ m. $d_E$ là cận dưới Euclid,
+    $L$ là độ dài Funnel Tree, $\ell_G$ là cận trên từ Dijkstra trên đồ thị cạnh;
+    đơn vị là mét của mô hình thu nhỏ.}
+  \label{tab:bounds}
+  {\fontsize{6.5}{8}\selectfont
+  \setlength{\tabcolsep}{3pt}%
+  \begin{tabular}{@{}lrrrr@{}}
+    \toprule
+    Goal & $d_E$ & $L$ & $\ell_G$ & $(\ell_G{-}L)/L$ \\
+    \midrule
+    g1 & 137,409 & 145,314559 & 151,981 & 4,59\,\% \\
+    g2 & 124,533 & 130,891670 & 137,266 & 4,87\,\% \\
+    g3 &  82,138 &  88,611502 & 108,404 & 22,34\,\% \\
+    \bottomrule
+  \end{tabular}}
+\end{table}
+
+Cặp cận này chỉ chạy được cho lưới $3$ m vì đây là bề mặt được công bố kèm dữ
+liệu; hai lưới còn lại chỉ có route và manifest, không có tệp bề mặt đầy đủ trong
+bộ kết quả lưu trữ. Hình~\ref{fig:routes-small} minh họa đầu ra của công cụ vẽ tuyến trên
 bảy mesh còn lại; cùng với \texttt{icosahedron} và \texttt{J17}, cả chín mesh đều
 có ảnh tuyến.
 
@@ -338,8 +370,9 @@ và vị trí trên đoạn $p_i\to p_{i+1}$ là
   \label{eq:catmullrom}
 \end{equation}
 với $0\le u\le 1$, trong đó $h_{00}=2u^3-3u^2+1$,
-$h_{10}=u^3-2u^2+u$, $h_{01}=-2u^3+3u^2$ và $h_{11}=u^3-u^2$; cách chọn tiếp
-tuyến theo \eqref{eq:tangent} bảo đảm $q(0)=p_i$ và $q(1)=p_{i+1}$. Spline được
+$h_{10}=u^3-2u^2+u$, $h_{01}=-2u^3+3u^2$ và $h_{11}=u^3-u^2$. Chính cơ sở
+Hermite bảo đảm $q(0)=p_i$ và $q(1)=p_{i+1}$ với mọi cách chọn tiếp tuyến;
+\eqref{eq:tangent} chỉ quyết định hình dạng đoạn cong giữa hai đầu. Spline được
 lấy mẫu cách khoảng $0{,}2$ đơn vị để tính chiều dài cung; vận tốc và hướng tiếp
 tuyến liên tục, và phương tiện chỉ dừng ở điểm cuối.
 
@@ -376,9 +409,11 @@ mẫu và sai số cuối $e_{\rm final}$ tại thời điểm kết thúc.
 Mỗi goal có một world riêng. World dùng bản visual của thành phố có normal để
 Gazebo tô sáng, một bản collision đã decimate bằng vertex clustering với ô
 $1{,}0$, và một SDF đặt bước vật lý $0{,}001$ giây, trọng trường $9{,}8$, vật thể
-$1$ kg cùng plugin điều khiển. Với scene hiện tại, collision giảm từ
-\num{301482} xuống \num{26296} tam giác và từ \num{204682} xuống \num{12402}
-đỉnh, đủ giữ hình dạng để kiểm tra độ cao nhưng nhẹ hơn cho vật lý. Tuyến kế hoạch
+$1$ kg cùng plugin điều khiển. Scene gốc có \num{301490} tam giác; tám tam giác
+diện tích bằng không (sliver) bị loại khi ghi STL nên bản dùng để dựng world còn
+\num{301482} tam giác. Từ bản này, collision giảm do decimate xuống \num{26296}
+tam giác và từ \num{204682} xuống \num{12402} đỉnh, đủ giữ hình dạng để kiểm tra
+độ cao nhưng nhẹ hơn cho vật lý. Tuyến kế hoạch
 được vẽ bằng các ống trụ và chấm màu tại waypoint; camera đặt ở phía tây-nam để
 khung trọn tuyến.
 
@@ -427,7 +462,9 @@ Bảng~\ref{tab:environment} ghi cấu hình máy và phiên bản dùng khi đo
 Một chuyến bay \emph{hợp lệ} nếu pha cuối là \texttt{complete} và
 $e_{\rm final}\le\num{0.5}$; chuyến bay \emph{đạt mốc chất lượng} nếu ngoài ra
 $e_{\max}\le\num{1.0}$. Hai tiêu chí tách riêng để một góc cua trễ không làm dừng
-quy trình, nhưng vẫn được ghi nhận là trượt mốc.
+quy trình, nhưng vẫn được ghi nhận là trượt mốc. Đây là các ngưỡng kỹ thuật đặt
+trước cho mô hình thu nhỏ, không suy ra từ dự phòng ngang $r$ hay khoảng hở đứng
+$\delta$, và không phải bảo đảm an toàn va chạm.
 
 Chín chuyến bay (ba cấu hình $\times$ ba đích) đều hợp lệ. Bảy chuyến đạt mốc;
 hai chuyến trượt mốc đều ở G2, một ở lưới $5$ và một ở lưới $3$. Riêng lưới $4$
@@ -437,7 +474,8 @@ Bảng~\ref{tab:tracking} tập hợp các chỉ số từ telemetry đã lưu.
 \begin{table*}[!t]
   \caption{Kết quả bám tuyến của chín chuyến bay. $T$ là thời gian mô phỏng,
     $e_{\max}$ và $\bar e$ là sai số lớn nhất và trung bình, $e_{\rm final}$ là
-    sai số cuối, $v_{\max}$ là vận tốc đo lớn nhất. Đơn vị là đơn vị mô phỏng.}
+    sai số cuối, $v_{\max}$ là vận tốc đo lớn nhất. Đơn vị là mét của mô hình thu
+    nhỏ.}
   \label{tab:tracking}
   {\fontsize{7}{8.6}\selectfont
   \begin{adjustbox}{max width=\textwidth}
@@ -471,24 +509,34 @@ vận tốc đạt tới $9{,}87$; giá trị này không phải giới hạn $3
 chiếu, mà phản ánh các đỉnh hiệu chỉnh của PD tại góc cua, nên không được so trực
 tiếp với $a_{\max}$.
 
-Cơ chế trượt mốc ở G2 khác nhau giữa hai cấu hình. Với lưới $5$, tuyến có $46$
-waypoint với khoảng cách không đều; tại một chỗ nối, tiếp tuyến Catmull--Rom dài
-gấp $7{,}6$ lần đoạn ngắn kề nó, làm quỹ đạo lùi lại và sai số đạt $1{,}022$ tại
-góc cua. Với lưới $4$, tuyến có $59$ waypoint đều hơn, tỉ lệ tiếp tuyến giảm còn
-$3{,}15$ và sai số lớn nhất còn $0{,}591$. Với lưới $3$, tuyến có $73$ waypoint
+Cơ chế trượt mốc ở G2 khác nhau giữa các cấu hình; Bảng~\ref{tab:waypoints} ghi
+khoảng cách waypoint và tỉ lệ tiếp tuyến trên đúng tuyến đã rút gọn mà plugin
+bay. Với lưới $5$, tuyến còn $25$ waypoint (từ $46$ trước rút gọn) với khoảng
+cách không đều; tại một chỗ nối, tiếp tuyến Catmull--Rom dài gấp $7{,}6$ lần đoạn
+ngắn kề nó, làm quỹ đạo lùi lại và sai số đạt $1{,}022$ tại góc cua. Với lưới
+$4$, tuyến còn $24$ waypoint (từ $59$) đều hơn, tỉ lệ tiếp tuyến giảm còn $3{,}15$
+và sai số lớn nhất còn $0{,}591$. Với lưới $3$, tuyến còn $38$ waypoint (từ $73$)
 nhưng bề mặt dùng vách dốc $45^\circ$: lúc $7{,}89$ giây, đích leo với vận tốc
 đứng $2{,}08$ trong khi vận tốc đứng của phương tiện còn $-0{,}53$; đến
 $8{,}19$ giây, phương tiện ở cao độ $5{,}74$ trong khi đích đã lên $7{,}12$ và sai
-số đạt $1{,}381$. Quỹ đạo $5$\,m/s với gia tốc $3$ không đủ leo nhanh như vách
-dốc đòi hỏi, nên sai số ở đây chủ yếu theo phương thẳng đứng.
+số đạt $1{,}381$. Bảng~\ref{tab:g2vertical} phân rã sai số tại các mốc này: thành
+phần đứng chiếm hơn $99\,\%$, còn vận tốc đứng tham chiếu đổi từ $-3{,}57$ sang
+$+2{,}08$ trong khoảng $0{,}6$ giây, tương đương khoảng $9$ mét trên giây bình
+phương --- vượt cả giới hạn profile $3$ và ngưỡng chặn lệnh $6$. Quỹ đạo
+$5$\,m/s với gia tốc $3$ không đủ leo nhanh như vách dốc đòi hỏi, nên sai số ở đây
+chủ yếu theo phương thẳng đứng; muốn xử lý triệt để cần làm mượt cao độ đích hoặc
+giảm độ dốc $\lambda$, không chỉ tăng gia tốc profile.
 
 G1 và G3 đều đạt mốc ở cả ba cấu hình. Với G1, sai số lớn nhất là $0{,}365$
 (lưới $5$), $0{,}399$ (lưới $4$) và $0{,}508$ (lưới $3$); tuyến có $27$ waypoint
-trên lưới $5$ và $4$, tỉ lệ tiếp tuyến lớn nhất $2{,}92$--$3{,}36$, nên sai số chỉ
-tăng ở các góc cua và vẫn dưới mốc. Với G3, sai số lớn nhất là $0{,}852$ (lưới
+trên lưới $5$ và $4$ (Bảng~\ref{tab:waypoints}), tỉ lệ tiếp tuyến lớn nhất
+$2{,}92$--$3{,}36$, nên sai số chỉ tăng ở các góc cua và vẫn dưới mốc. Với G3, sai số lớn nhất là $0{,}852$ (lưới
 $5$), $0{,}601$ (lưới $4$) và $0{,}580$ (lưới $3$); lưới $4$ có trung bình cao
 nhất ($0{,}136$) vì tuyến có $26$ waypoint với đoạn ngắn nhất $0{,}777$ và tỉ lệ
-tiếp tuyến $5{,}40$, nhưng sai số lớn nhất vẫn dưới $1$.
+tiếp tuyến $5{,}40$, nhưng sai số lớn nhất vẫn dưới $1$. Hai ví dụ này cho thấy
+tỉ lệ tiếp tuyến chỉ giải thích được một phần sai số: lưới $5$ ở G3 có tỉ lệ
+$1{,}65$ nhưng sai số $0{,}852$, cao hơn lưới $4$ ở G1 ($2{,}92$ và $0{,}399$),
+nên độ dốc cao độ và mật độ điểm cũng đóng góp đáng kể.
 
 \begin{figure*}[!t]
   \centering
@@ -689,7 +737,7 @@ cho kích thước ô.
 
 Hình~\ref{fig:routes-detail} cho thấy tuyến không đi theo mặt phẳng: khi bề mặt
 có một tháp cao, tuyến leo lên theo ramp rồi xuống phía bên kia; các đoạn gãy
-tương ứng với đỉnh tam giác. Hình chiếu bằng xác nhận ba tuyến tách nhau ngay sau
+tương ứng với cạnh tam giác. Hình chiếu bằng xác nhận ba tuyến tách nhau ngay sau
 nguồn và chỉ gặp lại ở vùng gần đích, phù hợp với việc mỗi goal được tìm trong
 một lượt riêng.
 
@@ -732,10 +780,10 @@ luận vận hành, bên cạnh các số liệu ở trên.
     vách $45^\circ$ và làm G2 trượt vì thiếu vận tốc đứng. Trong ba cấu hình đã
     chạy, $4$ m là lựa chọn làm việc; $3$ m chỉ nên dùng nếu giảm tốc độ hoặc tăng
     gia tốc.
-  \item \textbf{Sai số bám tuyến phải đo từ telemetry động.} Con số $2{,}4$ mm của
-    bản cũ là sai số tái dựng route ngoại tuyến, không phải sai số bám setpoint.
-    Telemetry trong nghiên cứu cho $0{,}365$--$1{,}381$ đơn vị; đây mới là đại
-    lượng dùng để kết luận về chất lượng bay.
+  \item \textbf{Sai số bám tuyến phải đo từ telemetry động.} Sai số tái dựng route
+    ngoại tuyến chỉ phản ánh khâu dựng polyline, không phải sai số bám setpoint.
+    Telemetry trong nghiên cứu cho $0{,}365$--$1{,}381$ mét; đây là đại lượng dùng
+    để kết luận về chất lượng bay.
   \item \textbf{Không có bộ giải độc lập cho bề mặt thành phố.} Năm mesh nhỏ có
     tham chiếu và khớp $76/76$ đỉnh; bề mặt thành phố không có, nên bài không
     tuyên bố tuyến thành phố là tối ưu. Muốn kết luận mạnh hơn phải thêm một bộ
@@ -761,7 +809,9 @@ pipeline, hữu ích cho việc chọn cấu hình làm việc nhưng không ph�
 ablation có kiểm soát.
 
 Mỗi cấu hình chỉ được chạy một lần, không lặp lại và không có thống kê phân tán;
-thời gian lập tuyến phụ thuộc tải máy. Mô hình bay là khối điểm $1$ kg có điều
+thời gian lập tuyến phụ thuộc tải máy. Telemetry được lấy mẫu mỗi $0{,}1$ giây
+trong khi vật lý chạy $1$ ms, nên đỉnh sai số giữa hai mẫu có thể bị bỏ sót; các
+giá trị $e_{\max}$ vì vậy là cận dưới của sai số thực. Mô hình bay là khối điểm $1$ kg có điều
 khiển PD, không có động lực học rotor, điều khiển tư thế, nhiễu cảm biến hay
 autopilot, nên kết quả xác nhận tính khả thi của tuyến trong mô hình rút gọn,
 không xác nhận khả năng bay của một UAV thực. Bề mặt dẫn đường là trường cao độ,
@@ -771,7 +821,8 @@ tra va chạm của spline với công trình, chưa khảo sát nhiều nhiệm
 UAV, và chưa có bộ giải độc lập cho bề mặt thành phố để đối chiếu tính tối ưu.
 
 Các hướng tiếp theo gồm: lặp lại mỗi cấu hình nhiều lần trong điều kiện tải được
-khống chế; giữ cố định điểm đầu cuối khi so kích thước ô; thêm phép kiểm tra va
-chạm dọc spline; hiệu chỉnh tốc độ và gia tốc cho các vách dốc $45^\circ$; và tích
+khống chế; giữ cố định điểm đầu cuối khi so kích thước ô; thử Catmull--Rom
+centripetal hoặc chia đều waypoint để giảm vọt lố khi khoảng cách không đều; thêm
+phép kiểm tra va chạm dọc spline; hiệu chỉnh tốc độ và gia tốc cho các vách dốc $45^\circ$; và tích
 hợp mô hình rotor hoặc autopilot cùng nhiễu trạng thái trước khi kết luận về khả
 năng bay thực.

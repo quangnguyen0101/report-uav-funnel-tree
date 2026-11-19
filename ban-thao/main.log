@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/nixos.org) (preloaded format=pdflatex 1980.1.1)  19 NOV 2026 10:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/nixos.org) (preloaded format=pdflatex 1980.1.1)  19 NOV 2026 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2073,26 +2073,26 @@ Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -2174,9 +2174,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 139.
-Package biblatex Info: Reference segment=0 on input line 139.
-Package hyperref Info: Link coloring OFF on input line 139.
+Package biblatex Info: Reference section=0 on input line 142.
+Package biblatex Info: Reference segment=0 on input line 142.
+Package hyperref Info: Link coloring OFF on input line 142.
 
 (/nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texm
 fdist/tex/latex/translations/translations-basic-dictionary-english.trsl
@@ -2184,17 +2184,17 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 139.
+or `english'. on input line 142.
 Package translations Info: no dictionary file `translations-basic-dictionary-vi
-etnamese.trsl' found. on input line 139.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 142
+etnamese.trsl' found. on input line 142.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 145
 .
 
 (/nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texm
 fdist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 142
+LaTeX Font Info:    Trying to load font information for U+msb on input line 145
 .
 
 (/nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texm
@@ -2202,7 +2202,7 @@ fdist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for T5+cmss on input line 1
-42.
+45.
 
 (/nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texm
 fdist/tex/latex/vntex/t5cmss.fd
@@ -2261,7 +2261,7 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 39.
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 26--42
+Underfull \hbox (badness 1968) in paragraph at lines 26--44
 \T5/cmr/m/n/10 to¡n. Thuªt to¡n cõa Mitchell, Mount v 
  []
 
@@ -2269,12 +2269,8 @@ Underfull \hbox (badness 1968) in paragraph at lines 26--42
 File: Figures/crop/repo_icosahedron_routes.png Graphic file (type png)
 <use Figures/crop/repo_icosahedron_routes.png>
 Package pdftex.def Info: Figures/crop/repo_icosahedron_routes.png  used on inpu
-t line 45.
+t line 47.
 (pdftex.def)             Requested size: 186.78505pt x 188.54597pt.
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 85.
-
 [2
 
 
@@ -2283,25 +2279,8 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 fdist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./Figures/crop/repo_icosahedr
 on_routes.png (PNG copy)>]
 
-Package hyperref Warning: Suppressing empty link on input line 158.
-
-
-Package hyperref Warning: Suppressing empty link on input line 163.
-
-
-Package hyperref Warning: Suppressing empty link on input line 164.
-
-
-Package hyperref Warning: Suppressing empty link on input line 167.
-
-
-Package hyperref Warning: Suppressing empty link on input line 169.
-
-
-Package hyperref Warning: Suppressing empty link on input line 171.
-
-
-Package hyperref Warning: Suppressing empty link on input line 174.
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 91.
 
 ) (./Sections/02-Co-so-ly-thuyet.tex
 
@@ -2310,32 +2289,29 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 34.
+(csquotes)                Punctuation tracker may fail on input line 36.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 95.
+(csquotes)                Punctuation tracker may fail on input line 97.
 
 [3]
 
-Package hyperref Warning: Suppressing empty link on input line 113.
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 135.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 132.
-
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 134.
+(csquotes)                Punctuation tracker may fail on input line 137.
 
 [4]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 157.
+(csquotes)                Punctuation tracker may fail on input line 160.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 161.
+(csquotes)                Punctuation tracker may fail on input line 164.
 
 
 (/nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texm
@@ -2343,161 +2319,140 @@ fdist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 168.
+nput line 171.
 (./Code/funnel_tree.py
 LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <5.8> not available
 (Font)              Font shape `T5/cmtt/m/n' tried instead on input line 1.
 )
 Package hyperref Info: bookmark level for unknown code defaults to 0 on input l
-ine 169.
-(./Code/funnel_expand.py) (./Code/funnel_clip.py)
+ine 172.
+(./Code/funnel_expand.py) (./Code/funnel_clip.py) [5]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 200.
+(csquotes)                Punctuation tracker may fail on input line 204.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 226.
+(csquotes)                Punctuation tracker may fail on input line 231.
 
-[5]) (./Sections/03-Du-lieu-EDA.tex
+) (./Sections/03-Du-lieu-EDA.tex
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 14.
-
-
-Package hyperref Warning: Suppressing empty link on input line 23.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 33.
 
 
-Package hyperref Warning: Suppressing empty link on input line 41.
-
-
 Underfull \hbox (badness 1616) in paragraph at lines 39--42
 []\T5/cmr/m/n/10 k±m theo l  file mæ h¼nh th nh phè
  []
 
+[6]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 57.
 
-[6]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 117.
+(csquotes)                Punctuation tracker may fail on input line 118.
 
 [7]
-<Figures/crop/repo_icosahedron.png, id=323, 1143.27126pt x 1137.24875pt>
+<Figures/crop/repo_icosahedron.png, id=339, 1143.27126pt x 1137.24875pt>
 File: Figures/crop/repo_icosahedron.png Graphic file (type png)
 <use Figures/crop/repo_icosahedron.png>
 Package pdftex.def Info: Figures/crop/repo_icosahedron.png  used on input line 
-231.
+232.
 (pdftex.def)             Requested size: 197.08095pt x 196.03679pt.
-<Figures/crop/repo_cliff.png, id=324, 1155.31625pt x 1137.24875pt>
+<Figures/crop/repo_cliff.png, id=340, 1155.31625pt x 1137.24875pt>
 File: Figures/crop/repo_cliff.png Graphic file (type png)
 <use Figures/crop/repo_cliff.png>
-Package pdftex.def Info: Figures/crop/repo_cliff.png  used on input line 236.
+Package pdftex.def Info: Figures/crop/repo_cliff.png  used on input line 237.
 (pdftex.def)             Requested size: 197.08095pt x 193.98914pt.
-<Figures/crop/repo_star.png, id=325, 1216.545pt x 1137.24875pt>
+<Figures/crop/repo_star.png, id=341, 1216.545pt x 1137.24875pt>
 File: Figures/crop/repo_star.png Graphic file (type png)
 <use Figures/crop/repo_star.png>
-Package pdftex.def Info: Figures/crop/repo_star.png  used on input line 241.
+Package pdftex.def Info: Figures/crop/repo_star.png  used on input line 242.
 (pdftex.def)             Requested size: 197.08095pt x 184.2194pt.
-<Figures/crop/repo_cube.png, id=328, 1161.33875pt x 1137.24875pt>
+[8]
+<Figures/crop/repo_cube.png, id=355, 1161.33875pt x 1137.24875pt>
 File: Figures/crop/repo_cube.png Graphic file (type png)
 <use Figures/crop/repo_cube.png>
-Package pdftex.def Info: Figures/crop/repo_cube.png  used on input line 263.
+Package pdftex.def Info: Figures/crop/repo_cube.png  used on input line 264.
 (pdftex.def)             Requested size: 197.08095pt x 192.98267pt.
-<Figures/crop/repo_J17.png, id=329, 1147.28625pt x 1137.24875pt>
+<Figures/crop/repo_J17.png, id=356, 1147.28625pt x 1137.24875pt>
 File: Figures/crop/repo_J17.png Graphic file (type png)
 <use Figures/crop/repo_J17.png>
-Package pdftex.def Info: Figures/crop/repo_J17.png  used on input line 268.
+Package pdftex.def Info: Figures/crop/repo_J17.png  used on input line 269.
 (pdftex.def)             Requested size: 197.08095pt x 195.34268pt.
-<Figures/crop/repo_L.png, id=330, 1147.28625pt x 1137.24875pt>
+<Figures/crop/repo_L.png, id=357, 1147.28625pt x 1137.24875pt>
 File: Figures/crop/repo_L.png Graphic file (type png)
 <use Figures/crop/repo_L.png>
-Package pdftex.def Info: Figures/crop/repo_L.png  used on input line 273.
+Package pdftex.def Info: Figures/crop/repo_L.png  used on input line 274.
 (pdftex.def)             Requested size: 197.08095pt x 195.34268pt.
-
-Package hyperref Warning: Suppressing empty link on input line 290.
-
 File: Figures/crop/repo_J17.png Graphic file (type png)
 <use Figures/crop/repo_J17.png>
-Package pdftex.def Info: Figures/crop/repo_J17.png  used on input line 296.
+Package pdftex.def Info: Figures/crop/repo_J17.png  used on input line 297.
 (pdftex.def)             Requested size: 197.08095pt x 195.34268pt.
-<Figures/crop/repo_J17_routes.png, id=333, 1193.45876pt x 1276.77pt>
+<Figures/crop/repo_J17_routes.png, id=361, 1193.45876pt x 1276.77pt>
 File: Figures/crop/repo_J17_routes.png Graphic file (type png)
 <use Figures/crop/repo_J17_routes.png>
 Package pdftex.def Info: Figures/crop/repo_J17_routes.png  used on input line 3
-01.
+02.
 (pdftex.def)             Requested size: 197.08095pt x 210.8333pt.
-[8]
-<Figures/crop/repo_dome.png, id=346, 1228.59pt x 1137.24875pt>
+<Figures/crop/repo_dome.png, id=364, 1228.59pt x 1137.24875pt>
 File: Figures/crop/repo_dome.png Graphic file (type png)
 <use Figures/crop/repo_dome.png>
-Package pdftex.def Info: Figures/crop/repo_dome.png  used on input line 324.
+Package pdftex.def Info: Figures/crop/repo_dome.png  used on input line 325.
 (pdftex.def)             Requested size: 192.79245pt x 178.4582pt.
-<Figures/crop/repo_terrain.png, id=347, 1209.51875pt x 1137.24875pt>
+<Figures/crop/repo_terrain.png, id=365, 1209.51875pt x 1137.24875pt>
 File: Figures/crop/repo_terrain.png Graphic file (type png)
 <use Figures/crop/repo_terrain.png>
-Package pdftex.def Info: Figures/crop/repo_terrain.png  used on input line 329.
+Package pdftex.def Info: Figures/crop/repo_terrain.png  used on input line 330.
 
 (pdftex.def)             Requested size: 192.79245pt x 181.2694pt.
 
-Underfull \hbox (badness 2591) in paragraph at lines 337--340
+Underfull \hbox (badness 2591) in paragraph at lines 338--341
 []\T5/cmr/m/n/10 Cuèi còng, H¼nh []7[] biºu di¹n mæ h¼nh
  []
 
-<Figures/crop/repo_demo_mesh.png, id=349, 1147.28625pt x 1137.24875pt>
+<Figures/crop/repo_demo_mesh.png, id=367, 1147.28625pt x 1137.24875pt>
 File: Figures/crop/repo_demo_mesh.png Graphic file (type png)
 <use Figures/crop/repo_demo_mesh.png>
 Package pdftex.def Info: Figures/crop/repo_demo_mesh.png  used on input line 34
-3.
+4.
 (pdftex.def)             Requested size: 197.1627pt x 195.42944pt.
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 361.
-
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 368.
-
-
-Package hyperref Warning: Suppressing empty link on input line 368.
-
-LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T5/cmtt/m/n' tried instead on input line 372.
-
-Package hyperref Warning: Suppressing empty link on input line 372.
-
 [9 <./Figures/crop/repo_icosahedron.png (PNG copy)> <./Figures/crop/repo_cliff.
 png (PNG copy)> <./Figures/crop/repo_star.png (PNG copy)>]
 
-Package hyperref Warning: Suppressing empty link on input line 382.
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 362.
 
-) (./Sections/04-Ket-qua.tex [10 <./Figures/crop/repo_cube.png (PNG copy)> <./F
-igures/crop/repo_J17.png (PNG copy)> <./Figures/crop/repo_L.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
+
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 369.
+
+LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T5/cmtt/m/n' tried instead on input line 373.
+[10 <./Figures/crop/repo_cube.png (PNG copy)> <./Figures/crop/repo_J17.png (PNG
+ copy)> <./Figures/crop/repo_L.png (PNG copy)>]) (./Sections/04-Ket-qua.tex [11
+ <./Figures/crop/repo_J17_routes.png (PNG copy)> <./Figures/crop/repo_dome.png 
+(PNG copy)> <./Figures/crop/repo_terrain.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
 []\T5/cmr/m/n/10 Bèn mesh khæng câ reference (\T5/cmtt/m/n/10 cube\T5/cmr/m/n/1
 0 ,
  []
 
-
-Package hyperref Warning: Suppressing empty link on input line 72.
-
-(./Code/compare_excerpt.json) [11 <./Figures/crop/repo_J17_routes.png (PNG copy
-)> <./Figures/crop/repo_dome.png (PNG copy)> <./Figures/crop/repo_terrain.png (
-PNG copy)>]
-Underfull \hbox (badness 2469) in paragraph at lines 102--105
+(./Code/compare_excerpt.json)
+Underfull \hbox (badness 2469) in paragraph at lines 105--108
 \OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (1; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 0[]
 5; 1[]5)$\T5/cmr/m/n/10 , $\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (0[]91865; 1[]45
 943; 1[]5)$ \T5/cmr/m/n/10 v 
  []
 
-
-Underfull \hbox (badness 1466) in paragraph at lines 105--108
+[12 <./Figures/crop/repo_demo_mesh.png (PNG copy)>]
+Underfull \hbox (badness 1466) in paragraph at lines 108--111
 \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 5\OML/
 cmm/m/it/10 ; \OT1/cmr/m/n/10 6)$\T5/cmr/m/n/10 , $\OML/cmm/m/it/10 f[]\OT1/cmr
 /m/n/10 (3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/1
@@ -2507,26 +2462,27 @@ cmm/m/it/10 f[]\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m
 /it/10 ; \OT1/cmr/m/n/10 4)$\T5/cmr/m/n/10 ,
  []
 
-[12 <./Figures/crop/repo_demo_mesh.png (PNG copy)>]
 File: Figures/crop/repo_cliff.png Graphic file (type png)
 <use Figures/crop/repo_cliff.png>
-Package pdftex.def Info: Figures/crop/repo_cliff.png  used on input line 118.
+Package pdftex.def Info: Figures/crop/repo_cliff.png  used on input line 121.
 (pdftex.def)             Requested size: 197.1627pt x 194.07591pt.
 
-Underfull \hbox (badness 5316) in paragraph at lines 196--199
+Underfull \hbox (badness 5316) in paragraph at lines 203--206
    []\T5/cmr/m/n/10 Kµp gi¡ trà (\T5/cmr/m/it/10 value clamping\T5/cmr/m/n/10 )
 [] ^^^èi sè cõa
  []
 
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 213.
-
 [13]
 
-Package hyperref Warning: Suppressing empty link on input line 256.
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 220.
 
-) (./Sections/05-Mo-phong-Gazebo.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--245
+   []\T5/cmr/m/n/10 D¨n ^^_÷íng theo b· m°t d¨n ^^_÷íng
+ []
+
+[14]) (./Sections/05-Mo-phong-Gazebo.tex
 Underfull \hbox (badness 1215) in paragraph at lines 5--5
 |\T5/cmss/bx/n/12 MÆ PHÄNG GAZEBO TR–N B—
  []
@@ -2539,232 +2495,231 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 41.
 
-[14]
-<Figures/crop/repo_surface5.png, id=487, 1270.7475pt x 1137.24875pt>
+[15]
+<Figures/crop/repo_surface5.png, id=523, 1270.7475pt x 1137.24875pt>
 File: Figures/crop/repo_surface5.png Graphic file (type png)
 <use Figures/crop/repo_surface5.png>
-Package pdftex.def Info: Figures/crop/repo_surface5.png  used on input line 127
+Package pdftex.def Info: Figures/crop/repo_surface5.png  used on input line 130
 .
-(pdftex.def)             Requested size: 282.76576pt x 253.05875pt.
-<Figures/crop/repo_surface4.png, id=488, 1268.74pt x 1137.24875pt>
+(pdftex.def)             Requested size: 257.06097pt x 230.04868pt.
+<Figures/crop/repo_surface4.png, id=524, 1268.74pt x 1137.24875pt>
 File: Figures/crop/repo_surface4.png Graphic file (type png)
 <use Figures/crop/repo_surface4.png>
-Package pdftex.def Info: Figures/crop/repo_surface4.png  used on input line 132
+Package pdftex.def Info: Figures/crop/repo_surface4.png  used on input line 135
 .
-(pdftex.def)             Requested size: 282.76576pt x 253.45786pt.
-<Figures/crop/repo_surface3.png, id=489, 1268.74pt x 1137.24875pt>
+(pdftex.def)             Requested size: 257.06097pt x 230.41309pt.
+<Figures/crop/repo_surface3.png, id=525, 1268.74pt x 1137.24875pt>
 File: Figures/crop/repo_surface3.png Graphic file (type png)
 <use Figures/crop/repo_surface3.png>
-Package pdftex.def Info: Figures/crop/repo_surface3.png  used on input line 143
+Package pdftex.def Info: Figures/crop/repo_surface3.png  used on input line 146
 .
 (pdftex.def)             Requested size: 321.32295pt x 288.02502pt.
-<Figures/crop/etc_city_close.png, id=493, 826.08624pt x 754.82pt>
+<Figures/crop/etc_city_close.png, id=529, 826.08624pt x 754.82pt>
 File: Figures/crop/etc_city_close.png Graphic file (type png)
 <use Figures/crop/etc_city_close.png>
 Package pdftex.def Info: Figures/crop/etc_city_close.png  used on input line 16
-1.
+4.
 (pdftex.def)             Requested size: 265.62488pt x 242.71062pt.
-<Figures/crop/etc_surface_close.png, id=494, 809.0225pt x 754.82pt>
+<Figures/crop/etc_surface_close.png, id=530, 809.0225pt x 754.82pt>
 File: Figures/crop/etc_surface_close.png Graphic file (type png)
 <use Figures/crop/etc_surface_close.png>
 Package pdftex.def Info: Figures/crop/etc_surface_close.png  used on input line
- 166.
+ 169.
 (pdftex.def)             Requested size: 265.62488pt x 247.82443pt.
-<Figures/crop/etc_routes_3d.png, id=496, 809.0225pt x 754.82pt>
+<Figures/crop/etc_routes_3d.png, id=532, 809.0225pt x 754.82pt>
 File: Figures/crop/etc_routes_3d.png Graphic file (type png)
 <use Figures/crop/etc_routes_3d.png>
-Package pdftex.def Info: Figures/crop/etc_routes_3d.png  used on input line 186
+Package pdftex.def Info: Figures/crop/etc_routes_3d.png  used on input line 189
 .
 (pdftex.def)             Requested size: 265.62488pt x 247.82443pt.
-<Figures/crop/etc_routes_top.png, id=497, 712.6625pt x 681.54625pt>
+<Figures/crop/etc_routes_top.png, id=533, 712.6625pt x 681.54625pt>
 File: Figures/crop/etc_routes_top.png Graphic file (type png)
 <use Figures/crop/etc_routes_top.png>
 Package pdftex.def Info: Figures/crop/etc_routes_top.png  used on input line 19
-1.
+4.
 (pdftex.def)             Requested size: 265.62488pt x 254.01929pt.
-[15] [16 <./Figures/crop/repo_surface5.png (PNG copy)> <./Figures/crop/repo_sur
-face4.png (PNG copy)>]
-<Figures/crop/repo_cliff_routes.png, id=518, 1278.7775pt x 1256.695pt>
+LaTeX Font Info:    Calculating math sizes for size <6.5> on input line 281.
+<Figures/crop/repo_cliff_routes.png, id=538, 1278.7775pt x 1256.695pt>
 File: Figures/crop/repo_cliff_routes.png Graphic file (type png)
 <use Figures/crop/repo_cliff_routes.png>
 Package pdftex.def Info: Figures/crop/repo_cliff_routes.png  used on input line
- 270.
+ 302.
 (pdftex.def)             Requested size: 100.68144pt x 98.9269pt.
-<Figures/crop/repo_cube_routes.png, id=519, 1284.8pt x 1256.695pt>
+<Figures/crop/repo_cube_routes.png, id=539, 1284.8pt x 1256.695pt>
 File: Figures/crop/repo_cube_routes.png Graphic file (type png)
 <use Figures/crop/repo_cube_routes.png>
 Package pdftex.def Info: Figures/crop/repo_cube_routes.png  used on input line 
-275.
+307.
 (pdftex.def)             Requested size: 100.68144pt x 98.46669pt.
-<Figures/crop/repo_L_routes.png, id=520, 1172.38pt x 1276.77pt>
+<Figures/crop/repo_L_routes.png, id=540, 1172.38pt x 1276.77pt>
 File: Figures/crop/repo_L_routes.png Graphic file (type png)
 <use Figures/crop/repo_L_routes.png>
-Package pdftex.def Info: Figures/crop/repo_L_routes.png  used on input line 280
+Package pdftex.def Info: Figures/crop/repo_L_routes.png  used on input line 312
 .
 (pdftex.def)             Requested size: 100.68144pt x 109.64423pt.
-<Figures/crop/repo_star_routes.png, id=521, 1346.02875pt x 1276.77pt>
+<Figures/crop/repo_star_routes.png, id=541, 1346.02875pt x 1276.77pt>
 File: Figures/crop/repo_star_routes.png Graphic file (type png)
 <use Figures/crop/repo_star_routes.png>
 Package pdftex.def Info: Figures/crop/repo_star_routes.png  used on input line 
-285.
+317.
 (pdftex.def)             Requested size: 100.68144pt x 95.50035pt.
-<Figures/crop/repo_dome_routes.png, id=522, 1359.0775pt x 1276.77pt>
+<Figures/crop/repo_dome_routes.png, id=542, 1359.0775pt x 1276.77pt>
 File: Figures/crop/repo_dome_routes.png Graphic file (type png)
 <use Figures/crop/repo_dome_routes.png>
 Package pdftex.def Info: Figures/crop/repo_dome_routes.png  used on input line 
-291.
+323.
 (pdftex.def)             Requested size: 100.68144pt x 94.56522pt.
-<Figures/crop/repo_terrain_routes.png, id=523, 1337.99875pt x 1276.77pt>
+<Figures/crop/repo_terrain_routes.png, id=543, 1337.99875pt x 1276.77pt>
 File: Figures/crop/repo_terrain_routes.png Graphic file (type png)
 <use Figures/crop/repo_terrain_routes.png>
 Package pdftex.def Info: Figures/crop/repo_terrain_routes.png  used on input li
-ne 296.
+ne 328.
 (pdftex.def)             Requested size: 100.68144pt x 96.06532pt.
-<Figures/crop/repo_demo_mesh_routes.png, id=524, 1200.485pt x 1276.77pt>
+<Figures/crop/repo_demo_mesh_routes.png, id=544, 1200.485pt x 1276.77pt>
 File: Figures/crop/repo_demo_mesh_routes.png Graphic file (type png)
 <use Figures/crop/repo_demo_mesh_routes.png>
 Package pdftex.def Info: Figures/crop/repo_demo_mesh_routes.png  used on input 
-line 301.
+line 333.
 (pdftex.def)             Requested size: 100.68144pt x 107.0726pt.
-[17 <./Figures/crop/repo_surface3.png (PNG copy)>] [18 <./Figures/crop/etc_city
-_close.png (PNG copy)> <./Figures/crop/etc_surface_close.png (PNG copy)>] [19 <
-./Figures/crop/etc_routes_3d.png (PNG copy)> <./Figures/crop/etc_routes_top.png
- (PNG copy)>]
+[16] [17 <./Figures/crop/repo_surface5.png (PNG copy)> <./Figures/crop/repo_sur
+face4.png (PNG copy)>] [18 <./Figures/crop/repo_surface3.png (PNG copy)>] [19 <
+./Figures/crop/etc_city_close.png (PNG copy)> <./Figures/crop/etc_surface_close
+.png (PNG copy)>]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 390.
+(csquotes)                Punctuation tracker may fail on input line 425.
 
 
-Underfull \hbox (badness 2970) in paragraph at lines 390--396
+Underfull \hbox (badness 2970) in paragraph at lines 425--431
 \T5/cmr/m/n/10 Ch¸ ^^_ë m°c ^^_ành l  container tø image
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--396
+Underfull \hbox (badness 10000) in paragraph at lines 425--431
 \T5/cmtt/m/n/10 ghcr.io/openrobotics/gazebo:jetty-full
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 390--396
+Underfull \hbox (badness 1168) in paragraph at lines 425--431
 \T5/cmr/m/n/10 (kho£ng 3 GB), ghim b¬ng digest; ch¸ ^^_ë
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 390--396
+Underfull \hbox (badness 1297) in paragraph at lines 425--431
 \T5/cmtt/m/n/10 --native \T5/cmr/m/n/10 dòng Gazebo c i tr¶n m¡y. Ch¤y
  []
 
-
-Underfull \hbox (badness 1838) in paragraph at lines 427--431
+[20 <./Figures/crop/etc_routes_3d.png (PNG copy)> <./Figures/crop/etc_routes_to
+p.png (PNG copy)>]
+Underfull \hbox (badness 1838) in paragraph at lines 462--468
 \T5/cmr/m/n/10 Mët chuy¸n bay \T5/cmr/m/it/10 hñp l» \T5/cmr/m/n/10 n¸u pha cuè
 i l 
  []
 
-[20 <./Figures/crop/repo_cliff_routes.png (PNG copy)> <./Figures/crop/repo_cube
+[21 <./Figures/crop/repo_cliff_routes.png (PNG copy)> <./Figures/crop/repo_cube
 _routes.png (PNG copy)> <./Figures/crop/repo_L_routes.png (PNG copy)> <./Figure
 s/crop/repo_star_routes.png (PNG copy)> <./Figures/crop/repo_dome_routes.png (P
 NG copy)> <./Figures/crop/repo_terrain_routes.png (PNG copy)> <./Figures/crop/r
 epo_demo_mesh_routes.png (PNG copy)>]
-<Figures/crop/cell4_g2_tracking.png, id=561, 1478.52374pt x 1450.41875pt>
+<Figures/crop/cell4_g2_tracking.png, id=600, 1478.52374pt x 1450.41875pt>
 File: Figures/crop/cell4_g2_tracking.png Graphic file (type png)
 <use Figures/crop/cell4_g2_tracking.png>
 Package pdftex.def Info: Figures/crop/cell4_g2_tracking.png  used on input line
- 497.
+ 545.
 (pdftex.def)             Requested size: 282.76576pt x 277.37508pt.
-<Figures/crop/cell3_g2_tracking.png, id=562, 1477.52pt x 1450.41875pt>
+<Figures/crop/cell3_g2_tracking.png, id=601, 1477.52pt x 1450.41875pt>
 File: Figures/crop/cell3_g2_tracking.png Graphic file (type png)
 <use Figures/crop/cell3_g2_tracking.png>
 Package pdftex.def Info: Figures/crop/cell3_g2_tracking.png  used on input line
- 502.
+ 550.
 (pdftex.def)             Requested size: 282.76576pt x 277.57426pt.
-<Figures/crop/cell4_g1_tracking.png, id=564, 1481.535pt x 1450.41875pt>
+<Figures/crop/cell4_g1_tracking.png, id=603, 1481.535pt x 1450.41875pt>
 File: Figures/crop/cell4_g1_tracking.png Graphic file (type png)
 <use Figures/crop/cell4_g1_tracking.png>
 Package pdftex.def Info: Figures/crop/cell4_g1_tracking.png  used on input line
- 521.
+ 569.
 (pdftex.def)             Requested size: 282.76576pt x 276.8218pt.
-<Figures/crop/cell4_g3_tracking.png, id=565, 1481.535pt x 1450.41875pt>
+<Figures/crop/cell4_g3_tracking.png, id=604, 1481.535pt x 1450.41875pt>
 File: Figures/crop/cell4_g3_tracking.png Graphic file (type png)
 <use Figures/crop/cell4_g3_tracking.png>
 Package pdftex.def Info: Figures/crop/cell4_g3_tracking.png  used on input line
- 526.
+ 574.
 (pdftex.def)             Requested size: 282.76576pt x 276.8218pt.
-<Figures/crop/gazebo_g1_city.png, id=567, 1927.2pt x 1084.05pt>
+<Figures/crop/gazebo_g1_city.png, id=606, 1927.2pt x 1084.05pt>
 File: Figures/crop/gazebo_g1_city.png Graphic file (type png)
 <use Figures/crop/gazebo_g1_city.png>
-Package pdftex.def Info: Figures/crop/gazebo_g1_city.png  used on input line 54
-4.
+Package pdftex.def Info: Figures/crop/gazebo_g1_city.png  used on input line 59
+2.
 (pdftex.def)             Requested size: 192.79245pt x 108.44443pt.
-<Figures/crop/gazebo_g1_close.png, id=568, 1927.2pt x 1084.05pt>
+<Figures/crop/gazebo_g1_close.png, id=607, 1927.2pt x 1084.05pt>
 File: Figures/crop/gazebo_g1_close.png Graphic file (type png)
 <use Figures/crop/gazebo_g1_close.png>
 Package pdftex.def Info: Figures/crop/gazebo_g1_close.png  used on input line 5
-49.
+97.
 (pdftex.def)             Requested size: 192.79245pt x 108.44443pt.
-<Figures/crop/gazebo_g2_city.png, id=569, 1927.2pt x 1084.05pt>
+<Figures/crop/gazebo_g2_city.png, id=608, 1927.2pt x 1084.05pt>
 File: Figures/crop/gazebo_g2_city.png Graphic file (type png)
 <use Figures/crop/gazebo_g2_city.png>
-Package pdftex.def Info: Figures/crop/gazebo_g2_city.png  used on input line 55
-4.
+Package pdftex.def Info: Figures/crop/gazebo_g2_city.png  used on input line 60
+2.
 (pdftex.def)             Requested size: 192.79245pt x 108.44443pt.
-<Figures/crop/gazebo_g2_close.png, id=570, 1927.2pt x 1084.05pt>
+<Figures/crop/gazebo_g2_close.png, id=609, 1927.2pt x 1084.05pt>
 File: Figures/crop/gazebo_g2_close.png Graphic file (type png)
 <use Figures/crop/gazebo_g2_close.png>
-Package pdftex.def Info: Figures/crop/gazebo_g2_close.png  used on input line 5
-59.
+Package pdftex.def Info: Figures/crop/gazebo_g2_close.png  used on input line 6
+07.
 (pdftex.def)             Requested size: 192.79245pt x 108.44443pt.
-<Figures/crop/gazebo_g3_city.png, id=571, 1927.2pt x 1084.05pt>
+<Figures/crop/gazebo_g3_city.png, id=610, 1927.2pt x 1084.05pt>
 File: Figures/crop/gazebo_g3_city.png Graphic file (type png)
 <use Figures/crop/gazebo_g3_city.png>
-Package pdftex.def Info: Figures/crop/gazebo_g3_city.png  used on input line 56
-4.
+Package pdftex.def Info: Figures/crop/gazebo_g3_city.png  used on input line 61
+2.
 (pdftex.def)             Requested size: 192.79245pt x 108.44443pt.
-<Figures/crop/gazebo_g3_close.png, id=572, 1927.2pt x 1084.05pt>
+<Figures/crop/gazebo_g3_close.png, id=611, 1927.2pt x 1084.05pt>
 File: Figures/crop/gazebo_g3_close.png Graphic file (type png)
 <use Figures/crop/gazebo_g3_close.png>
-Package pdftex.def Info: Figures/crop/gazebo_g3_close.png  used on input line 5
-69.
+Package pdftex.def Info: Figures/crop/gazebo_g3_close.png  used on input line 6
+17.
 (pdftex.def)             Requested size: 192.79245pt x 108.44443pt.
-<Figures/crop/cell4_routes.png, id=576, 1403.2425pt x 1256.695pt>
+<Figures/crop/cell4_routes.png, id=615, 1403.2425pt x 1256.695pt>
 File: Figures/crop/cell4_routes.png Graphic file (type png)
 <use Figures/crop/cell4_routes.png>
-Package pdftex.def Info: Figures/crop/cell4_routes.png  used on input line 669.
+Package pdftex.def Info: Figures/crop/cell4_routes.png  used on input line 717.
 
 (pdftex.def)             Requested size: 299.9001pt x 268.57341pt.
-<Figures/crop/cell3_routes.png, id=577, 1403.2425pt x 1256.695pt>
+<Figures/crop/cell3_routes.png, id=616, 1403.2425pt x 1256.695pt>
 File: Figures/crop/cell3_routes.png Graphic file (type png)
 <use Figures/crop/cell3_routes.png>
-Package pdftex.def Info: Figures/crop/cell3_routes.png  used on input line 674.
+Package pdftex.def Info: Figures/crop/cell3_routes.png  used on input line 722.
 
 (pdftex.def)             Requested size: 299.9001pt x 268.57341pt.
-[21]
-<Figures/crop/etc_city_wide.png, id=590, 811.03pt x 723.70375pt>
+<Figures/crop/etc_city_wide.png, id=619, 811.03pt x 723.70375pt>
 File: Figures/crop/etc_city_wide.png Graphic file (type png)
 <use Figures/crop/etc_city_wide.png>
-Package pdftex.def Info: Figures/crop/etc_city_wide.png  used on input line 700
+Package pdftex.def Info: Figures/crop/etc_city_wide.png  used on input line 748
 .
 (pdftex.def)             Requested size: 205.64485pt x 183.49846pt.
-<Figures/crop/etc_routes_3d_alt.png, id=591, 733.74126pt x 754.82pt>
+<Figures/crop/etc_routes_3d_alt.png, id=620, 733.74126pt x 754.82pt>
 File: Figures/crop/etc_routes_3d_alt.png Graphic file (type png)
 <use Figures/crop/etc_routes_3d_alt.png>
 Package pdftex.def Info: Figures/crop/etc_routes_3d_alt.png  used on input line
- 705.
+ 753.
 (pdftex.def)             Requested size: 205.64485pt x 211.54396pt.
-[22 <./Figures/crop/cell4_g2_tracking.png (PNG copy)> <./Figures/crop/cell3_g2_
-tracking.png (PNG copy)>] [23 <./Figures/crop/cell4_g1_tracking.png (PNG copy)>
- <./Figures/crop/cell4_g3_tracking.png (PNG copy)>] [24 <./Figures/crop/gazebo_
-g1_city.png (PNG copy)> <./Figures/crop/gazebo_g1_close.png (PNG copy)> <./Figu
-res/crop/gazebo_g2_city.png (PNG copy)> <./Figures/crop/gazebo_g2_close.png (PN
-G copy)> <./Figures/crop/gazebo_g3_city.png (PNG copy)> <./Figures/crop/gazebo_
-g3_close.png (PNG copy)>]
+[22] [23 <./Figures/crop/cell4_g2_tracking.png (PNG copy)> <./Figures/crop/cell
+3_g2_tracking.png (PNG copy)>] [24 <./Figures/crop/cell4_g1_tracking.png (PNG c
+opy)> <./Figures/crop/cell4_g3_tracking.png (PNG copy)>] [25 <./Figures/crop/ga
+zebo_g1_city.png (PNG copy)> <./Figures/crop/gazebo_g1_close.png (PNG copy)> <.
+/Figures/crop/gazebo_g2_city.png (PNG copy)> <./Figures/crop/gazebo_g2_close.pn
+g (PNG copy)> <./Figures/crop/gazebo_g3_city.png (PNG copy)> <./Figures/crop/ga
+zebo_g3_close.png (PNG copy)>]
 
-LaTeX Warning: Text page 25 contains only floats.
+LaTeX Warning: Text page 26 contains only floats.
 
 
-LaTeX Warning: Text page 25 contains only floats.
+LaTeX Warning: Text page 26 contains only floats.
 
-[25 <./Figures/crop/cell4_routes.png (PNG copy)> <./Figures/crop/cell3_routes.p
-ng (PNG copy)>]) (./Sections/06-Ket-luan.tex [26 <./Figures/crop/etc_city_wide.
+[26 <./Figures/crop/cell4_routes.png (PNG copy)> <./Figures/crop/cell3_routes.p
+ng (PNG copy)>]) (./Sections/06-Ket-luan.tex [27 <./Figures/crop/etc_city_wide.
 png (PNG copy)> <./Figures/crop/etc_routes_3d_alt.png (PNG copy)>]) (./Sections
 /07-Danh-muc-viet-tat.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
@@ -2777,7 +2732,7 @@ Underfull \hbox (badness 3323) in paragraph at lines 12--14
  []
 
 
-Underfull \hbox (badness 2564) in paragraph at lines 17--18
+Underfull \hbox (badness 2564) in paragraph at lines 16--17
    []\T5/cmr/m/n/10 RRT[] (Rapidly-exploring Random Tree): C¥y
  []
 
@@ -2787,7 +2742,7 @@ Sections/10-Cam-on.tex) (./Sections/12-Phu-luc.tex
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 8.
 
-[27]
+
 (/nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texm
 fdist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
@@ -2795,15 +2750,20 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 (/nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texm
 fdist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
-) (./Code/pipeline_commands.sh) (./Code/docker_commands.sh) (./Code/route_excer
-pt.json) (./Code/validation_excerpt.json) [28]<<Attachments/funnel_physics.sdf>
-><<Attachments/city.sim.collision.stl>>
+) (./Code/pipeline_commands.sh) [28] (./Code/docker_commands.sh) (./Code/route_
+excerpt.json) (./Code/validation_excerpt.json) [29]<<Attachments/funnel_physics
+.sdf>><<Attachments/city.sim.collision.stl>>
 Underfull \hbox (badness 3568) in paragraph at lines 90--92
-[][][][][][] \T5/cmr/m/n/10 --- collision ^^_¢
+[]\T5/cmtt/m/n/10 city.sim.collision.stl \T5/cmr/m/n/10 --- collision ^^_¢
  []
 
 <<Attachments/validation_g2_cell4.json>><<Attachments/routes_cell3.json>><<Atta
-chments/manifest_cell4.json>>) (./Sections/11-Tai-lieu-tham-khao.tex
+chments/manifest_cell4.json>>
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
+[]\T5/cmtt/m/n/10 manifest_cell4.json \T5/cmr/m/n/10 --- manifest cõa
+ []
+
+) (./Sections/11-Tai-lieu-tham-khao.tex
 Underfull \hbox (badness 2103) in paragraph at lines 99--5
 \T5/cmr/m/n/10 T»p visual \T5/cmtt/m/n/10 city.sim.glb \T5/cmr/m/n/10 (8,2 MB) 
 khæng
@@ -2815,26 +2775,26 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 6.
 
 
-Underfull \hbox (badness 4132) in paragraph at lines 158--158
+Underfull \hbox (badness 4132) in paragraph at lines 161--161
 \T5/cmr/m/n/10 ^^_°t Funnel Tree v  quy tr¼nh thüc
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 158--158
+Underfull \hbox (badness 1158) in paragraph at lines 161--161
 \T5/cmr/m/n/10 3D, gi§y ph²p CC BY 4.0. Truy cªp
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--158
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
 []\T5/cmr/m/n/10 Gazebo. Gazebo Jetty (gz-sim 10)
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 158--158
+Underfull \hbox (badness 1237) in paragraph at lines 161--161
 \T5/cmr/m/n/10 documentation. Phi¶n b£n 10.5.0, truy
  []
 
-[29]
+[30]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -2868,26 +2828,26 @@ Underfull \hbox (badness 1237) in paragraph at lines 158--158
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 5359) in paragraph at lines 161--161
+Underfull \hbox (badness 5359) in paragraph at lines 164--164
 []$[]$\T5/cmr/m/it/7 Institute of Math-e-mat-i-cal and
  []
 
 
-Underfull \hbox (badness 7116) in paragraph at lines 161--161
+Underfull \hbox (badness 7116) in paragraph at lines 164--164
 \T5/cmr/m/it/7 Ho Chi Minh City Uni-ver-sity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
 []\T5/cmr/m/n/8 Institute of Math-e-mat-i-cal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
 \T5/cmr/m/n/8 and Com-pu-ta-tional Sci-ences
  []
 
-[30
+[31
 
 
 ] (./main.aux)
@@ -2900,11 +2860,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47144 strings out of 467535
- 1001793 string characters out of 5388798
- 3252802 words of memory out of 5000000
- 74853 multiletter control sequences out of 15000+600000
- 663140 words of font info for 104 fonts, out of 8000000 for 9000
+ 47168 strings out of 467535
+ 1002150 string characters out of 5388798
+ 3251068 words of memory out of 5000000
+ 74875 multiletter control sequences out of 15000+600000
+ 668739 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,16n,135p,1181b,1986s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-te
@@ -2916,73 +2876,75 @@ ore/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbs
 yd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cm
 mi5.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-
-env-texmfdist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></nix/store/5xhrl01vhivc
+env-texmfdist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></nix/store/5xhrl01vhivc
 mwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-202
-5-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></nix/sto
+/amsfonts/cm/cmmi7.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-202
+5-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></nix/sto
 re/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd
-84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr5
-.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env
--texmfdist/fonts/type1/public/amsfonts/cm/cmr6.pfb></nix/store/5xhrl01vhivcmwvr
-3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78
-234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr8.pfb></nix/store/5xh
-rl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/typ
-e1/public/amsfonts/cm/cmr9.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-tex
-live-2025-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texm
-fdist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></nix/store/5xhrl01vhivcmwvr3sdk
+ts/type1/public/amsfonts/cm/cmmi9.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd
+84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-en
+v-texmfdist/fonts/type1/public/amsfonts/cm/cmr5.pfb></nix/store/5xhrl01vhivcmwv
+r3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public/am
+sfonts/cm/cmr6.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r7
+8234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr7.pfb></nix/store/5x
+hrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-te
+xlive-2025-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+/nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmf
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></nix/store/5xhrl01vhivcmwvr3sdk
 z0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public/amsfont
-s/cm/cmsy6.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234
--final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></nix/store/5xhrl
+s/cm/cmsy5.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234
+-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></nix/store/5xhrl
 01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1
-/public/amsfonts/cm/cmsy8.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texl
-ive-2025-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></
+/public/amsfonts/cm/cmsy7.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texl
+ive-2025-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
 nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfd
-ist/fonts/type1/public/amsfonts/symbols/msam10.pfb></nix/store/5xhrl01vhivcmwvr
-3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public/ams
-fonts/symbols/msam7.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-20
-25-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
-nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfd
-ist/fonts/type1/public/cm-super/sfrm0700.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0
+ist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0
+ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public/amsfonts/
+symbols/msam10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r7
+8234-final-env-texmfdist/fonts/type1/public/amsfonts/symbols/msam7.pfb></nix/st
+ore/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0
 ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/public/cm-super/
-sfrm0800.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-f
-inal-env-texmfdist/fonts/type1/public/cm-super/sfrm1000.pfb></nix/store/5xhrl01
-vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/v
-ntex/vnr/vnbx10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r
-78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnbx7.pfb></nix/store/5xhrl01vh
-ivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vnt
-ex/vnr/vnbx8.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r782
-34-final-env-texmfdist/fonts/type1/vntex/vnr/vnbx9.pfb></nix/store/5xhrl01vhivc
-mwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/
-vnr/vnbxti10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r782
-34-final-env-texmfdist/fonts/type1/vntex/vnr/vncsc10.pfb></nix/store/5xhrl01vhi
-vcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vnte
-x/vnr/vnitt10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78
-234-final-env-texmfdist/fonts/type1/vntex/vnr/vnr10.pfb></nix/store/5xhrl01vhiv
+sfrm0700.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-f
+inal-env-texmfdist/fonts/type1/public/cm-super/sfrm0800.pfb></nix/store/5xhrl01
+vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/p
+ublic/cm-super/sfrm1000.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texliv
+e-2025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnbx10.pfb></nix/store/
+5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/
+type1/vntex/vnr/vnbx7.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-
+2025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnbx8.pfb></nix/store/5xh
+rl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/typ
+e1/vntex/vnr/vnbx9.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-202
+5-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnbxti10.pfb></nix/store/5xh
+rl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/typ
+e1/vntex/vnr/vncsc10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2
+025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnitt10.pfb></nix/store/5x
+hrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/ty
+pe1/vntex/vnr/vnr10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-20
+25-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnr5.pfb></nix/store/5xhrl0
+1vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/
+vntex/vnr/vnr7.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r7
+8234-final-env-texmfdist/fonts/type1/vntex/vnr/vnr8.pfb></nix/store/5xhrl01vhiv
 cmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex
-/vnr/vnr5.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-
-final-env-texmfdist/fonts/type1/vntex/vnr/vnr7.pfb></nix/store/5xhrl01vhivcmwvr
-3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/
-vnr8.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final
--env-texmfdist/fonts/type1/vntex/vnr/vnr9.pfb></nix/store/5xhrl01vhivcmwvr3sdkz
-0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnssb
-x10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-
-env-texmfdist/fonts/type1/vntex/vnr/vnti10.pfb></nix/store/5xhrl01vhivcmwvr3sdk
-z0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnti
-7.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-en
-v-texmfdist/fonts/type1/vntex/vnr/vnti8.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0y
-gdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnti9.p
-fb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-t
-exmfdist/fonts/type1/vntex/vnr/vntt10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygd
-bsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vntt8.pfb
-></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-tex
-mfdist/fonts/type1/vntex/vnr/vntt9.pfb>
-Output written on main.pdf (30 pages, 16257810 bytes).
+/vnr/vnr9.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-
+final-env-texmfdist/fonts/type1/vntex/vnr/vnssbx10.pfb></nix/store/5xhrl01vhivc
+mwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/
+vnr/vnti10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234
+-final-env-texmfdist/fonts/type1/vntex/vnr/vnti7.pfb></nix/store/5xhrl01vhivcmw
+vr3sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/vn
+r/vnti8.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-fi
+nal-env-texmfdist/fonts/type1/vntex/vnr/vnti9.pfb></nix/store/5xhrl01vhivcmwvr3
+sdkz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/v
+ntt10.pfb></nix/store/5xhrl01vhivcmwvr3sdkz0ygdbsyd84l-texlive-2025-r78234-fina
+l-env-texmfdist/fonts/type1/vntex/vnr/vntt8.pfb></nix/store/5xhrl01vhivcmwvr3sd
+kz0ygdbsyd84l-texlive-2025-r78234-final-env-texmfdist/fonts/type1/vntex/vnr/vnt
+t9.pfb>
+Output written on main.pdf (31 pages, 16278921 bytes).
 PDF statistics:
- 1084 PDF objects out of 1200 (max. 8388607)
- 878 compressed objects within 9 object streams
- 456 named destinations out of 1000 (max. 500000)
+ 1128 PDF objects out of 1200 (max. 8388607)
+ 918 compressed objects within 10 object streams
+ 458 named destinations out of 1000 (max. 500000)
  402 words of extra memory for PDF output out of 10000 (max. 10000000)
 

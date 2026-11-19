@@ -22,8 +22,8 @@ Thuật toán được thực thi trên 9 mesh \texttt{.off} của bộ dữ li�
   \item[Khả năng chạy và tính nhất quán nội tại] với 4 mesh không có reference,
     kiểm tra route được dựng cho mọi đỉnh đích và độ dài polyline dựng lại khớp
     độ dài nội tại mà phép lan truyền tính được.
-  \item[Quy mô tìm kiếm] ghi nhận số lần lan truyền và việc bật/tắt cắt tỉa trong
-    route JSON, thay cho số nút cây và số sự kiện clip mà phiên bản cũ ghi riêng.
+  \item[Quy mô tìm kiếm] ghi nhận số lần lan truyền và việc bật/tắt cắt tỉa
+    trong route JSON; số nút cây và số sự kiện cắt tỉa riêng lẻ không được ghi.
 \end{description}
 Bảng~\ref{tab:ket-qua-tong-the} tổng hợp các chỉ số thu được.
 
@@ -62,14 +62,17 @@ Nhận xét tổng quan:
     \texttt{L}, \texttt{star}, \texttt{demo\_mesh}), tổng cộng 76 đỉnh được so,
     không có failure ở ngưỡng tương đối $10^{-4}$. Sai số tương đối lớn nhất là
     $1{,}7\times10^{-5}$ (\texttt{cliff}), phát sinh từ việc reference chỉ giữ
-    bốn chữ số thập phân; các mesh còn lại có sai số nhỏ hơn một bậc.
+    bốn chữ số thập phân; các mesh còn lại có sai số tương đối từ
+    $9{,}0\times10^{-10}$ đến $6{,}7\times10^{-6}$, tức nhỏ hơn \texttt{cliff}
+    khoảng $2{,}5$ đến $5$ lần (\texttt{J17}, \texttt{star}) và $3$ đến $4$ bậc
+    (\texttt{L}, \texttt{demo\_mesh}).
   \item Bốn mesh không có reference (\texttt{cube}, \texttt{icosahedron},
     \texttt{dome}, \texttt{terrain}) vẫn dựng được route cho mọi đỉnh đích, với
     $P=1$, $1$, $1$ và $26$. Đây là kiểm tra khả năng chạy trên bề mặt lồi, bề mặt
     mở và bề mặt có lỗ, không phải đối chiếu độ dài với một bộ giải thứ hai.
   \item Mọi route JSON ghi \texttt{clipping=true}; cài đặt hiện tại không phát
     sinh log từng sự kiện clip, nên bài báo không báo số lần cắt cụt cụ thể. Cơ
-    chế cắt tỉa được mô tả định tính ở Mục~\ref{sec:clip}.
+    chế cắt tỉa được mô tả định tính ở Mục~\secref{sec:clip}.
 \end{itemize}
 
 \begin{code}[!t]
@@ -136,8 +139,8 @@ Từ Hình~\ref{fig:cliff-visual}, hai đặc trưng hình học quan trọng đ
 \subsubsection{Dữ liệu đầu ra và phân tích polyline}
 
 Bảng~\ref{tab:cliff-output} phân tích chi tiết polyline kết quả cho lưới
-\texttt{cliff}, đối chiếu giữa đường tham chiếu trong
-đường tham chiếu và độ dài do Funnel Tree trả về trong kết quả đối chiếu.
+\texttt{cliff}, đối chiếu polyline tham chiếu với độ dài do Funnel Tree trả về
+trong kết quả đối chiếu.
 
 \begin{table*}[!t]
   \caption{Chi tiết polyline đường đi ngắn nhất từ nguồn $s=1$ trên lưới
@@ -155,8 +158,8 @@ Bảng~\ref{tab:cliff-output} phân tích chi tiết polyline kết quả cho l�
       biến) \\
     $2$ & 2 & $[0;0;0]\to[3;-2;0]$ & 3,6056 & Đoạn thẳng trên mặt phẳng đáy
       $\triangle 102$ \\
-    $3$ & 3 & $[0;0;0]\to[1;-0{,}5;1{,}5]\to[2;-1;3]$ & 3,7417 & Gãy góc qua đỉnh gờ
-      trung gian $v=4$ \\
+    $3$ & 3 & $[0;0;0]\to[1;-0{,}5;1{,}5]\to[2;-1;3]$ & 3,7417 & Đoạn thẳng đi qua
+      đỉnh $v=4$; ba điểm thẳng hàng nên không có góc gãy \\
     $4$ & 2 & $[0;0;0]\to[1;-0{,}5;1{,}5]$ & 1,8708 & Đoạn thẳng trực tiếp trên mặt
       sườn $\triangle 124$ \\
     $5$ & 2 & $[0;0;0]\to[0{,}9186;1{,}4594;1{,}5]$ & 2,2855 & Đoạn thẳng trực tiếp
@@ -165,6 +168,8 @@ Bảng~\ref{tab:cliff-output} phân tích chi tiết polyline kết quả cho l�
       \textbf{Cắt ngang cạnh $[4,5]$ tại điểm trắc địa nội tại} \\
     \bottomrule
   \end{tabular}}
+  \par\smallskip
+  {\footnotesize Ký hiệu $\triangle ijk$ chỉ mặt tam giác có ba đỉnh $i$, $j$, $k$.}
 \end{table*}
 
 \subsection{Cơ chế cắt tỉa của Thủ tục 2}\label{sec:clip}
@@ -184,7 +189,9 @@ số lần lan truyền $P$ của từng mesh: $P=3$ trên \texttt{cliff}, $1$ t
 trên \texttt{demo\_mesh}, $26$ trên \texttt{terrain}. Với 5 mesh có reference,
 toàn bộ 76 đỉnh đều khớp độ dài trong ngưỡng $10^{-4}$ khi bật cắt tỉa. Đây là
 bằng chứng cắt tỉa không làm sai kết quả trên bộ dữ liệu này, không phải chứng
-minh chặn $O(n^2)$ cho mọi đầu vào.
+minh chặn $O(n^2)$ cho mọi đầu vào. Nghiên cứu chưa có thí nghiệm bật/tắt cắt tỉa
+riêng để đo mức giảm số nút; route JSON còn ghi trạng thái triển khai là
+\emph{experimental}, cần kiểm chứng theo từng mesh.
 
 \subsection{Phân tích sai số và tính ổn định số học}
 
@@ -202,8 +209,8 @@ $\cos,\sin,\arccos,\arcsin$ được gọi liên tiếp qua nhiều tầng mở 
     mesh nhỏ hơn. Trên \texttt{cliff}, nơi có đường cắt ngang cạnh, sai số tương
     đối lớn nhất là $1{,}7\times10^{-5}$ và vẫn nằm dưới ngưỡng $10^{-4}$.
   \item[Giới hạn diễn giải] Các sai số trên là sai số độ dài so với reference làm
-    tròn bốn chữ số, không phải chứng minh ổn định số học cho mọi cấu hình; repo
-    không kèm bộ test nhiễu hay kiểm tra độ dài trên mặt phẳng.
+    tròn bốn chữ số, không phải chứng minh ổn định số học cho mọi cấu hình; chưa có bộ
+    kiểm thử nhiễu hay phép kiểm tra độ dài trên mặt phẳng.
 \end{description}
 
 \subsection{Thảo luận và ý nghĩa ứng dụng cho bài toán đàn UAV}
@@ -211,33 +218,36 @@ $\cos,\sin,\arccos,\arcsin$ được gọi liên tiếp qua nhiều tầng mở 
 \subsubsection{So sánh ưu thế với nhánh phương pháp Chen và Han}
 
 Theo đối sánh trong bài báo gốc \cite{an2024funnel}, Funnel Tree tránh bước trải
-phẳng toàn cục (\emph{planar unfolding}) của nhánh thuật toán truyền thống và mang
-lại ba ưu thế:
+phẳng toàn cục (\emph{planar unfolding}) của nhánh thuật toán truyền thống trong
+pha lan truyền; bước tái dựng polyline của bản triển khai vẫn dùng trải phẳng cục
+bộ trên dải mặt đã chọn. Ba ưu thế được ghi nhận là:
 \begin{enumerate}
   \item Nhờ biên trái của phễu luôn là đường trắc địa thẳng nhất (\emph{straightest
     geodesic}), toàn bộ các tính toán mở rộng chỉ cần áp dụng định luật cos và sin
     cục bộ, loại bỏ chi phí duy trì ma trận biến đổi đẳng cự.
   \item Mỗi nút phễu chỉ lưu một số hằng hữu hạn, giảm đáng kể chi phí bộ nhớ so
     với cửa sổ (\emph{windows}) trên từng cạnh.
-  \item Cài đặt hoàn chỉnh chỉ phụ thuộc NumPy và thư viện chuẩn Python, không
-    cần thư viện hình học, mà vẫn đạt độ chính xác tương đương chương trình tham
-    chiếu.
+  \item Lõi thuật toán chỉ phụ thuộc NumPy và thư viện chuẩn Python; Shapely chỉ
+    xuất hiện ở bước dựng và kiểm tra bề mặt, không tham gia tìm đường. Kết quả
+    vẫn đạt độ chính xác tương đương chương trình tham chiếu.
 \end{enumerate}
 
-\subsubsection{Ý nghĩa thực tiễn đối với hệ thống UAV bầy đàn đô thị}
+\subsubsection{Ý nghĩa thực tiễn và hướng ứng dụng cho UAV đô thị}
 
 Kết quả thực nghiệm trên các lưới địa hình mở ra hướng ứng dụng trực tiếp:
 \begin{description}
-  \item[Dẫn đường bám sát bề mặt (\emph{terrain-following navigation})] Trong môi
-    trường đô thị có mật độ nhà cao tầng dày đặc hoặc vùng cấm bay tầm cao, quỹ
-    đạo bay bám theo bề mặt đa diện của các công trình (mái nhà, sườn tháp) giúp
-    UAV ẩn mình dưới tầm quét radar và tận dụng luồng gió nâng địa hình để tiết
-    kiệm năng lượng.
-  \item[Tối ưu hóa đa điểm giao hàng] Funnel Tree là thuật toán một nguồn -- mọi
-    đích. Chỉ với một lần dựng cây từ kho hàng $s$, toàn bộ lộ trình tối ưu tới
-    mọi khách hàng đều được xác định đồng thời, không cần chạy lại thuật toán cho
-    từng UAV riêng lẻ.
-  \item[Nền tảng cho bài toán đàn robot không va chạm] Tập hợp các polyline trắc
+  \item[Dẫn đường theo bề mặt dẫn đường (\emph{surface-following navigation})]
+    Trong môi trường đô thị dày đặc, một bề mặt dẫn đường phía trên công trình cho
+    phép đặt tuyến ở độ cao xác định thay vì bay tự do. Trong nghiên cứu này, UAV
+    bay trên envelope với khoảng hở đứng $\delta=1{,}5$ đơn vị, tức phía trên mái
+    chứ không bám sát mái. Các lợi ích như giảm khả năng bị phát hiện hay tận dụng
+    dòng nâng của địa hình mới là giả thuyết, chưa được đo trong bài.
+  \item[Tối ưu hóa đa điểm giao hàng] Về lý thuyết, Funnel Tree là thuật toán một
+    nguồn -- mọi đích: một lần dựng cây từ kho hàng $s$ cho ra lộ trình tới mọi
+    khách hàng. Trong phần mô phỏng thành phố, mỗi đích được chạy một lượt riêng
+    vì chạy chung làm số lần lan truyền tăng mạnh, nên ưu thế này chưa được khai
+    thác đầy đủ.
+  \item[Nền tảng cho điều phối nhiều UAV không va chạm (hướng phát triển)] Tập hợp các polyline trắc
     địa cung cấp khung lộ trình không gian chính xác, làm tiền đề để áp dụng các
     thuật toán điều phối thời gian (\emph{Time-Space Reservation}) nhằm tránh xung
     đột giữa các UAV trong đàn ở pha nghiên cứu tiếp theo.
@@ -250,10 +260,10 @@ Dựa trên những kết quả đạt được, các định hướng công vi�
   \item[Kết nối giao tiếp với UAV thực] Cài đặt giao thức truyền lộ trình trắc địa
     từ máy tính điều khiển tới bộ điều khiển bay của UAV, đồng thời thêm nhánh xử
     lý tín hiệu phản hồi vị trí để hiệu chỉnh quỹ đạo theo thời gian thực.
-  \item[Mô phỏng trên bản đồ chi tiết] Chuyển đổi bản đồ thành phố chi tiết thành
-    lưới tam giác hóa để mô phỏng tuyến bay trong môi trường đô thị, kế thừa mô
-    hình \texttt{city.glb}. Phần này đã được triển khai bước đầu ở
-    Mục~\ref{sec:gazebo}.
+  \item[Mở rộng mô phỏng trên bản đồ chi tiết] Phần dựng bề mặt từ
+    \texttt{city.glb} và bay ba tuyến đã được triển khai ở Mục~\secref{sec:gazebo}.
+    Hướng tiếp theo là nhiều nhiệm vụ, nhiều UAV, kiểm tra va chạm dọc spline và
+    đối chiếu với một bộ giải độc lập trên chính bề mặt thành phố.
   \item[Tối ưu thuật toán trên mesh lớn] Đánh giá và cải tiến hiệu năng cài đặt
     Python khi làm việc với mesh có mật độ mặt lớn hơn (hàng trăm nghìn tam giác),
     hướng tới khả năng dựng funnel tree trong thời gian chấp nhận được cho bài
