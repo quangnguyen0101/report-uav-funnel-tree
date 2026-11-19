@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1795056937.52262 "main.bcf" "main.bbl" "main" 1795072054.44241 0
-  "main.bcf" 1795072053.99582 109586 671ac005d8874c15e4921acf8a5381d0 "pdflatex"
+["biber main"] 1795056937.52262 "main.bcf" "main.bbl" "main" 1795072721.10244 0
+  "main.bcf" 1795072720.62631 109586 671ac005d8874c15e4921acf8a5381d0 "pdflatex"
   "refs.bib" 1795056931.11285 2034 e03e1a29c642029956e6bdc3ef844ca9 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1795072051.14208 "main.tex" "main.pdf" "main" 1795072054.44266 0
+["pdflatex"] 1795072717.65307 "main.tex" "main.pdf" "main" 1795072721.10269 0
   "/nix/store/0g6d3ddkff95hw332lqz7aik0i3cx7cs-texlive-2025-r78234-final-env/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1 5541489 22b519366c70269a9e551ab014ada117 ""
   "/nix/store/0g6d3ddkff95hw332lqz7aik0i3cx7cs-texlive-2025-r78234-final-env/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1 3637270 d75e5944989443c0c21ef457feb8955d ""
   "/nix/store/0g6d3ddkff95hw332lqz7aik0i3cx7cs-texlive-2025-r78234-final-env/share/texmf-var/web2c/texmf.cnf" 1 44263 8cfc90a75b6395f104e457606adc1fd7 ""
@@ -376,7 +376,7 @@
   "Figures/crop/repo_terrain_routes.png" 1795056084.21031 339346 82f0e3370b19f3a32ad0be4affa3bc38 ""
   "Sections/01-Gioi-thieu.tex" 1795071423.31579 11734 e44f9b03004ecca163c81f2cfc665802 ""
   "Sections/02-Co-so-ly-thuyet.tex" 1795071438.31261 15920 f44b2f8ff27aa4fd188498e708336ab5 ""
-  "Sections/03-Du-lieu-EDA.tex" 1795071423.31579 23387 57940a0664e80876832be9cdc89da516 ""
+  "Sections/03-Du-lieu-EDA.tex" 1795072717.32332 23399 210a4e71e81f116d8e11cfa6f7f85542 ""
   "Sections/04-Ket-qua.tex" 1795071552.55638 17716 2ab7f4bcff63f36ad249c459bb1a19ce ""
   "Sections/05-Mo-phong-Gazebo.tex" 1795071861.03592 48943 b5a5cc0ad523db96f5691b6ef2453c5d ""
   "Sections/06-Ket-luan.tex" 1795071552.55737 4421 6324b98bdc43cf609a36da4c1cb83316 ""
@@ -386,9 +386,9 @@
   "Sections/10-Cam-on.tex" 1795056119.87033 463 ca16b08df674fe2df983b5bce249c09e ""
   "Sections/11-Tai-lieu-tham-khao.tex" 1795056119.87233 279 7055829395e9f074e5bb29792c17cfce ""
   "Sections/12-Phu-luc.tex" 1795071341.87885 4594 c2b8acb374f0f58f0dc01a23c7463ed8 ""
-  "main.aux" 1795072053.98682 33011 4a5af539ad1773c5fa3c668fbaf6c962 "pdflatex"
+  "main.aux" 1795072720.61731 33011 4a5af539ad1773c5fa3c668fbaf6c962 "pdflatex"
   "main.bbl" 1795056939.04802 7877 4b3a649503764705c8a579e997a7932f "biber main"
-  "main.run.xml" 1795072053.99682 2365 e78583094df0934b6e907a92afc43f4c "pdflatex"
+  "main.run.xml" 1795072720.62731 2365 e78583094df0934b6e907a92afc43f4c "pdflatex"
   "main.tex" 1795071471.24323 5187 8ce2c832201d88204caf34233c139e35 ""
   "metadata.tex" 1795072042.76988 8209 ebd40bf0e7568de5ec871a0c6edfc1d5 ""
   "vnuhcmjet.cls" 1794722584.276 27349 bb1ec3828d82eaee4f294349c6af09c7 ""
