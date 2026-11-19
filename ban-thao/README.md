@@ -46,8 +46,8 @@ Số lượng: **18 bảng**, **19 hình**, **8 khối mã** (3 Python + 3 JSON 
 
 ## 3. Thông tin cần thầy xác nhận trước khi gửi
 
-1. **Tác giả**: hiện chỉ ghi `Phan Thành An`. Nếu bài có đồng tác giả, cần điền
-   đầy đủ họ tên trong `metadata.tex`, mục 3 (tạp chí không nhận "và các tác giả khác").
+1. **Tác giả**: đang để `Phan Thành An và các tác giả khác` (đúng như bản nháp
+   `Drone.zip`). Cần điền danh sách đầy đủ trong `metadata.tex`, mục 3.
 2. **Tác giả liên hệ**: Phan Thành An, `thanhan@hcmut.edu.vn`, IMACS – HCMUT
    (lấy theo mẫu `Tu-4.1.pdf`).
 3. **Thể loại**: `Bài nghiên cứu` / `Research Article`.

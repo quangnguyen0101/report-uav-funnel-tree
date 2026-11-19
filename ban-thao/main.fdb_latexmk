@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1795056937.52262 "main.bcf" "main.bbl" "main" 1795071864.85819 0
-  "main.bcf" 1795071864.3289 109586 671ac005d8874c15e4921acf8a5381d0 "pdflatex"
+["biber main"] 1795056937.52262 "main.bcf" "main.bbl" "main" 1795072054.44241 0
+  "main.bcf" 1795072053.99582 109586 671ac005d8874c15e4921acf8a5381d0 "pdflatex"
   "refs.bib" 1795056931.11285 2034 e03e1a29c642029956e6bdc3ef844ca9 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1795071861.40613 "main.tex" "main.pdf" "main" 1795071864.85846 0
+["pdflatex"] 1795072051.14208 "main.tex" "main.pdf" "main" 1795072054.44266 0
   "/nix/store/0g6d3ddkff95hw332lqz7aik0i3cx7cs-texlive-2025-r78234-final-env/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1 5541489 22b519366c70269a9e551ab014ada117 ""
   "/nix/store/0g6d3ddkff95hw332lqz7aik0i3cx7cs-texlive-2025-r78234-final-env/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1 3637270 d75e5944989443c0c21ef457feb8955d ""
   "/nix/store/0g6d3ddkff95hw332lqz7aik0i3cx7cs-texlive-2025-r78234-final-env/share/texmf-var/web2c/texmf.cnf" 1 44263 8cfc90a75b6395f104e457606adc1fd7 ""
@@ -386,11 +386,11 @@
   "Sections/10-Cam-on.tex" 1795056119.87033 463 ca16b08df674fe2df983b5bce249c09e ""
   "Sections/11-Tai-lieu-tham-khao.tex" 1795056119.87233 279 7055829395e9f074e5bb29792c17cfce ""
   "Sections/12-Phu-luc.tex" 1795071341.87885 4594 c2b8acb374f0f58f0dc01a23c7463ed8 ""
-  "main.aux" 1795071864.3209 33011 4a5af539ad1773c5fa3c668fbaf6c962 "pdflatex"
+  "main.aux" 1795072053.98682 33011 4a5af539ad1773c5fa3c668fbaf6c962 "pdflatex"
   "main.bbl" 1795056939.04802 7877 4b3a649503764705c8a579e997a7932f "biber main"
-  "main.run.xml" 1795071864.3299 2365 e78583094df0934b6e907a92afc43f4c "pdflatex"
+  "main.run.xml" 1795072053.99682 2365 e78583094df0934b6e907a92afc43f4c "pdflatex"
   "main.tex" 1795071471.24323 5187 8ce2c832201d88204caf34233c139e35 ""
-  "metadata.tex" 1795071471.24323 8262 9216308d4dd83a361dec0cda397c7432 ""
+  "metadata.tex" 1795072042.76988 8209 ebd40bf0e7568de5ec871a0c6edfc1d5 ""
   "vnuhcmjet.cls" 1794722584.276 27349 bb1ec3828d82eaee4f294349c6af09c7 ""
   (generated)
   "main.aux"
