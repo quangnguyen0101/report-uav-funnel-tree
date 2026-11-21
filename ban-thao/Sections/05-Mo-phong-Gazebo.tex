@@ -519,13 +519,17 @@ và sai số lớn nhất còn $0{,}591$. Với lưới $3$, tuyến còn $38$ w
 nhưng bề mặt dùng vách dốc $45^\circ$: lúc $7{,}89$ giây, đích leo với vận tốc
 đứng $2{,}08$ trong khi vận tốc đứng của phương tiện còn $-0{,}53$; đến
 $8{,}19$ giây, phương tiện ở cao độ $5{,}74$ trong khi đích đã lên $7{,}12$ và sai
-số đạt $1{,}381$. Bảng~\ref{tab:g2vertical} phân rã sai số tại các mốc này: thành
-phần đứng chiếm hơn $99\,\%$, còn vận tốc đứng tham chiếu đổi từ $-3{,}57$ sang
-$+2{,}08$ trong khoảng $0{,}6$ giây, tương đương khoảng $9$ mét trên giây bình
-phương --- vượt cả giới hạn profile $3$ và ngưỡng chặn lệnh $6$. Quỹ đạo
-$5$\,m/s với gia tốc $3$ không đủ leo nhanh như vách dốc đòi hỏi, nên sai số ở đây
-chủ yếu theo phương thẳng đứng; muốn xử lý triệt để cần làm mượt cao độ đích hoặc
-giảm độ dốc $\lambda$, không chỉ tăng gia tốc profile.
+số đạt $1{,}381$. Bảng~\ref{tab:g2vertical} phân rã sai số tại các mốc này: thành phần đứng chiếm hơn $99\,\%$. Vận tốc đứng tham chiếu
+đổi từ $-3{,}57$ m/s sang $+2{,}08$ m/s trong khoảng
+$0{,}6$ giây, tương ứng với mức biến thiên trung bình khoảng
+$9{,}4$ m/s$^2$. Giá trị này mô tả sự thay đổi vận tốc theo
+phương thẳng đứng, trong khi tham số $3$ m/s$^2$ của profile
+giới hạn gia tốc tiếp tuyến; hai đại lượng không đồng nhất.
+Với cấu hình vận tốc tham chiếu tối đa $5$ m/s và gia tốc
+tiếp tuyến tối đa $3$ m/s$^2$, sai số ở ca này chủ yếu theo
+phương thẳng đứng tại vùng chuyển tiếp cao độ.
+Các hướng cần thử nghiệm gồm giảm tốc độ, làm mượt cao độ
+tham chiếu hoặc giảm độ dốc $\lambda$.
 
 G1 và G3 đều đạt mốc ở cả ba cấu hình. Với G1, sai số lớn nhất là $0{,}365$
 (lưới $5$), $0{,}399$ (lưới $4$) và $0{,}508$ (lưới $3$); tuyến có $27$ waypoint
@@ -777,9 +781,10 @@ luận vận hành, bên cạnh các số liệu ở trên.
   \item \textbf{Chọn kích thước ô là bài toán cân bằng, không phải ``càng mịn càng
     tốt''.} Lưới $5$ m đủ nhanh nhưng waypoint không đều ở G2; lưới $4$ m là cấu
     hình duy nhất đạt mốc $1$ ở cả ba đích; lưới $3$ m sát hình học hơn nhưng tạo
-    vách $45^\circ$ và làm G2 trượt vì thiếu vận tốc đứng. Trong ba cấu hình đã
-    chạy, $4$ m là lựa chọn làm việc; $3$ m chỉ nên dùng nếu giảm tốc độ hoặc tăng
-    gia tốc.
+    vách $45^\circ$ và có sai số bám tại G2 chủ yếu theo phương
+    thẳng đứng. Trong ba cấu hình đã chạy, $4$ m là lựa chọn
+    làm việc; với lưới $3$ m, cần thử nghiệm giảm tốc độ hoặc
+    làm mượt vùng chuyển tiếp cao độ trước khi đánh giá lại.
   \item \textbf{Sai số bám tuyến phải đo từ telemetry động.} Sai số tái dựng route
     ngoại tuyến chỉ phản ánh khâu dựng polyline, không phải sai số bám setpoint.
     Telemetry trong nghiên cứu cho $0{,}365$--$1{,}381$ mét; đây là đại lượng dùng

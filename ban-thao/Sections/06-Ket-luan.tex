@@ -28,19 +28,22 @@ $4$ và $3$ m. Trên lưới $4$ m, ba tuyến từ một nguồn đến ba đí
 (Gazebo đọc một đơn vị cảnh là một mét; xem \secref{sec:stage-data}). Chín
 chuyến bay (ba lưới $\times$ ba đích) đều hợp lệ; bảy chuyến đạt mốc bám tuyến
 $1$ m, trong đó lưới $4$ m là cấu hình duy nhất đạt cả ba với sai số lớn nhất
-$0{,}399$--$0{,}601$ m. Lưới $5$ m và $3$ m mỗi lưới trượt đích G2 ($1{,}022$ m
-và $1{,}381$ m): ca thứ nhất do waypoint không đều ở góc cua, ca thứ hai do vách
-dốc $45^\circ$ đòi leo nhanh hơn giới hạn $5$ m/s $\cdot$ $3$ m/s$^2$. Kết quả
+$0{,}399$--$0{,}601$ m. Lưới $5$ m và $3$ m mỗi lưới có một ca chưa đạt ngưỡng
+sai số bám $1$ m tại đích G2 (lần lượt $1{,}022$ m và
+$1{,}381$ m). Các ca này xuất hiện tại góc cua có waypoint
+phân bố không đều và vùng chuyển tiếp cao độ dốc $45^\circ$,
+với cấu hình vận tốc tham chiếu tối đa $5$ m/s và gia tốc
+tiếp tuyến tối đa $3$ m/s$^2$. Kết quả
 cho thấy việc chọn kích thước ô phải đi cùng dự phòng ngang, độ dốc và tham số
 bay; không có cấu hình nào có sai số nhỏ nhất ở mọi đích.
 
 Về vận hành, quy trình ba stage \texttt{data} $\to$ \texttt{plan} $\to$
 \texttt{simulate} cùng chuỗi SHA và archive cho phép truy một con số về đúng scene,
 bề mặt, mission, route và telemetry; image Gazebo Jetty được ghim digest nên kết
-quả bay không đổi ngầm khi image đổi. Trong ba cấu hình, lưới $4$ m là lựa chọn
-làm việc cho mission hiện tại; lưới $3$ m chỉ nên dùng sau khi giảm tốc độ, giảm
-độ dốc của envelope hoặc làm mượt cao độ đích, vì vách $45^\circ$ vượt khả năng
-leo của profile $5$ m/s $\cdot$ $3$ m/s$^2$. Chi phí lập tuyến tăng nhanh hơn số tam giác ($45$ $\to$ $1\,008$
+quả bay không đổi ngầm khi image đổi. Trong ba cấu hình, lưới $4$ m là lựa chọn làm việc cho
+mission hiện tại. Với lưới $3$ m, cần thử nghiệm giảm tốc độ,
+giảm độ dốc của envelope hoặc làm mượt cao độ tham chiếu
+để giảm sai số bám tại vùng chuyển tiếp dốc $45^\circ$. Chi phí lập tuyến tăng nhanh hơn số tam giác ($45$ $\to$ $1\,008$
 giây), nên lưới mịn hơn cần chạy ngoại tuyến hoặc tối ưu lan truyền.
 
 Các kết quả xác nhận khả năng hoạt động của quy trình trong phạm vi thực nghiệm,
